@@ -1,0 +1,1778 @@
+{
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8"
+  },
+  "tolerances": {
+    "machine_atol": 1e-12,
+    "convergence_profile_relative_max": 0.001,
+    "convergence_cd_atol_um": 0.01,
+    "convergence_nils_relative": 0.01,
+    "textbook_continuous_raw_rmse": 0.001
+  },
+  "counts": {
+    "PASS": 227,
+    "FAIL": 0,
+    "SKIPPED": 0
+  },
+  "checks": [
+    {
+      "name": "magnification_0.424.pitch",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "magnification_0.424.coordinates",
+      "status": "PASS",
+      "error": 2.55351295663786e-15,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "magnification_0.424.render_propagate",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "magnification_1.0.pitch",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "magnification_1.0.coordinates",
+      "status": "PASS",
+      "error": 6.439293542825908e-15,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "magnification_1.0.render_propagate",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "magnification_1.3.pitch",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "magnification_1.3.coordinates",
+      "status": "PASS",
+      "error": 7.993605777301127e-15,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "magnification_1.3.render_propagate",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "invalid_magnification_0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "projection_magnification 必须是有限正数。"
+    },
+    {
+      "name": "invalid_magnification_1",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "projection_magnification 必须是有限正数。"
+    },
+    {
+      "name": "invalid_magnification_2",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "projection_magnification 必须是有限实数。"
+    },
+    {
+      "name": "invalid_magnification_3",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "projection_magnification 必须是有限实数。"
+    },
+    {
+      "name": "invalid_magnification_4",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "projection_magnification 必须是有限实数。"
+    },
+    {
+      "name": "invalid_magnification_5",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "projection_magnification 必须是有限实数。"
+    },
+    {
+      "name": "invalid_magnification_6",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "projection_magnification 必须是有限实数。"
+    },
+    {
+      "name": "invalid_magnification_7",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "projection_magnification 必须是有限实数。"
+    },
+    {
+      "name": "overflow_projected_pitch",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "projected_mirror_pitch_um 必须是有限实数。"
+    },
+    {
+      "name": "underflow_projected_pitch",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "projected_mirror_pitch_um 必须是有限正数。"
+    },
+    {
+      "name": "underflow_sample_spacing",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "sample_spacing_um 必须是有限正数。"
+    },
+    {
+      "name": "experiment_textbook_magnification_1.0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "experiment_cross_magnification_1.0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "experiment_sampling_magnification_1.0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "experiment_textbook_magnification_1.3",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "experiment_cross_magnification_1.3",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "experiment_sampling_magnification_1.3",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "experiment_textbook_ratio_overflow",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "教材实验的计算倍率、周期和采样间距必须为有限正数。"
+    },
+    {
+      "name": "experiment_textbook_ratio_underflow",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "教材实验的计算倍率、周期和采样间距必须为有限正数。"
+    },
+    {
+      "name": "experiment_textbook_spacing_underflow",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "教材实验的计算倍率、周期和采样间距必须为有限正数。"
+    },
+    {
+      "name": "experiment_cross_ratio_overflow",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "十字实验的计算倍率和采样间距必须为有限正数。"
+    },
+    {
+      "name": "experiment_cross_ratio_underflow",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "十字实验的计算倍率和采样间距必须为有限正数。"
+    },
+    {
+      "name": "experiment_cross_spacing_underflow",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "十字实验的计算倍率和采样间距必须为有限正数。"
+    },
+    {
+      "name": "experiment_textbook_period_overflow",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "教材实验的计算倍率、周期和采样间距必须为有限正数。"
+    },
+    {
+      "name": "experiment_sampling_pitch_overflow",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "采样比实验的计算倍率、间距和周期必须为有限正数。"
+    },
+    {
+      "name": "experiment_sampling_pitch_underflow",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "采样比实验的计算倍率、间距和周期必须为有限正数。"
+    },
+    {
+      "name": "experiment_sampling_ratio_underflow",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "采样比实验的计算倍率、间距和周期必须为有限正数。"
+    },
+    {
+      "name": "experiment_sampling_spacing_underflow",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "采样比实验的计算倍率、间距和周期必须为有限正数。"
+    },
+    {
+      "name": "experiment_sampling_period_overflow",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "采样比实验的计算倍率、间距和周期必须为有限正数。"
+    },
+    {
+      "name": "invalid_pupil_0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "pupil 与 object_field 的形状必须一致；实际分别为 (4, 5) 和 (4, 6)。"
+    },
+    {
+      "name": "invalid_pupil_1",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "pupil 必须是二维数组。"
+    },
+    {
+      "name": "invalid_pupil_2",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "pupil 不能为空数组。"
+    },
+    {
+      "name": "invalid_pupil_3",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "pupil 必须只包含有限数值。"
+    },
+    {
+      "name": "invalid_pupil_4",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "pupil 必须只包含有限数值。"
+    },
+    {
+      "name": "invalid_pupil_5",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "被动 pupil 必须满足 |P| <= 1；模值舍入容差为 1.0e-13。"
+    },
+    {
+      "name": "invalid_pupil_6",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "被动 pupil 必须满足 |P| <= 1；模值舍入容差为 1.0e-13。"
+    },
+    {
+      "name": "invalid_defocus_0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "defocus_um 必须是有限实数，不接受布尔值或复数。"
+    },
+    {
+      "name": "invalid_defocus_1",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "defocus_um 必须是有限实数，不接受布尔值或复数。"
+    },
+    {
+      "name": "invalid_defocus_2",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "defocus_um 必须是有限实数，不接受布尔值或复数。"
+    },
+    {
+      "name": "invalid_defocus_3",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "defocus_um 必须是有限实数，不接受布尔值或复数。"
+    },
+    {
+      "name": "invalid_defocus_4",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "defocus_um 必须是有限实数。"
+    },
+    {
+      "name": "invalid_defocus_5",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "defocus_um 必须是有限实数。"
+    },
+    {
+      "name": "invalid_defocus_6",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "defocus_um 必须是有限实数，不接受布尔值或复数。"
+    },
+    {
+      "name": "air_na_above_one",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "空气离焦生成器要求 0 < numerical_aperture <= 1。"
+    },
+    {
+      "name": "air_na_one_finite",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "air_na_one_grazing_phase",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.field",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.raw_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.input_energy",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": "Relative error for discrete sum energies; no physical-power claim."
+    },
+    {
+      "name": "baseline.no_leakage.default.output_energy",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": "Relative error for discrete sum energies; no physical-power claim."
+    },
+    {
+      "name": "baseline.no_leakage.default.energy_transmission",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": "Relative error for discrete sum energies; no physical-power claim."
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.keys",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.reference_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.threshold_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.fixed_left_edge_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.fixed_right_edge_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.fixed_cd_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.cd_error_to_design_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.left_error_to_design_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.right_error_to_design_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.design_edge_nils",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.nils_status",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.on_center_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.off_center_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.center_contrast",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.contrast_status",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.dark_max_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.dark_exceeds_threshold",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.dark_sample_left_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.dark_sample_right_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.search_left_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.search_right_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.default.metrics.threshold_status",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.field",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.raw_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.input_energy",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": "Relative error for discrete sum energies; no physical-power claim."
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.output_energy",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": "Relative error for discrete sum energies; no physical-power claim."
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.energy_transmission",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": "Relative error for discrete sum energies; no physical-power claim."
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.keys",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.reference_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.threshold_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.fixed_left_edge_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.fixed_right_edge_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.fixed_cd_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.cd_error_to_design_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.left_error_to_design_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.right_error_to_design_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.design_edge_nils",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.nils_status",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.on_center_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.off_center_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.center_contrast",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.contrast_status",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.dark_max_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.dark_exceeds_threshold",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.dark_sample_left_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.dark_sample_right_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.search_left_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.search_right_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.no_leakage.explicit_zero.metrics.threshold_status",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.field",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.raw_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.input_energy",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": "Relative error for discrete sum energies; no physical-power claim."
+    },
+    {
+      "name": "baseline.complex_leakage.default.output_energy",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": "Relative error for discrete sum energies; no physical-power claim."
+    },
+    {
+      "name": "baseline.complex_leakage.default.energy_transmission",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": "Relative error for discrete sum energies; no physical-power claim."
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.keys",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.reference_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.threshold_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.fixed_left_edge_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.fixed_right_edge_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.fixed_cd_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.cd_error_to_design_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.left_error_to_design_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.right_error_to_design_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.design_edge_nils",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.nils_status",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.on_center_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.off_center_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.center_contrast",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.contrast_status",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.dark_max_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.dark_exceeds_threshold",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.dark_sample_left_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.dark_sample_right_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.search_left_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.search_right_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.default.metrics.threshold_status",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.field",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.raw_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.input_energy",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": "Relative error for discrete sum energies; no physical-power claim."
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.output_energy",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": "Relative error for discrete sum energies; no physical-power claim."
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.energy_transmission",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": "Relative error for discrete sum energies; no physical-power claim."
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.keys",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.reference_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.threshold_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.fixed_left_edge_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.fixed_right_edge_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.fixed_cd_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.cd_error_to_design_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.left_error_to_design_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.right_error_to_design_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.design_edge_nils",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.nils_status",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.on_center_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.off_center_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.center_contrast",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.contrast_status",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.dark_max_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.dark_exceeds_threshold",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.dark_sample_left_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.dark_sample_right_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.search_left_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.search_right_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "baseline.complex_leakage.explicit_zero.metrics.threshold_status",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "textbook.original_field",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "textbook.original_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "textbook.original_metrics.keys",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "textbook.original_metrics.space_center_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "textbook.original_metrics.line_center_intensity",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "textbook.original_metrics.contrast",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "textbook.original_metrics.threshold_interval.keys",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "textbook.original_metrics.threshold_interval.left_edge_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "textbook.original_metrics.threshold_interval.right_edge_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "textbook.original_metrics.threshold_interval.width_um",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "textbook.original_metrics.nils",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "textbook.independent_1d_executed",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": "已调用textbook_dense_lines_aerial_image.py的真实API；nm/um已换算，最高通过级次=3，中央周期同坐标比较"
+    },
+    {
+      "name": "textbook.continuous_1d_raw_rmse",
+      "status": "PASS",
+      "error": 0.0008177803256570893,
+      "tolerance": 0.001,
+      "detail": "Finite grid vs continuous rectangle coefficients: not a machine-precision identity."
+    },
+    {
+      "name": "constant_phase.field",
+      "status": "PASS",
+      "error": 2.8449465006019636e-16,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "constant_phase.intensity",
+      "status": "PASS",
+      "error": 6.661338147750939e-16,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "negative_real_pupil",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "defocus_energy_-50.0",
+      "status": "PASS",
+      "error": 2.567204445341051e-16,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "passive_energy_-50.0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "pupil_modulus_-50.0",
+      "status": "PASS",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "pupil_dc_-50.0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "defocus_energy_-25.0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "passive_energy_-25.0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "pupil_modulus_-25.0",
+      "status": "PASS",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "pupil_dc_-25.0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "defocus_energy_0.0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "passive_energy_0.0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "pupil_modulus_0.0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "pupil_dc_0.0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "defocus_energy_25.0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "passive_energy_25.0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "pupil_modulus_25.0",
+      "status": "PASS",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "pupil_dc_25.0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "defocus_energy_50.0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "passive_energy_50.0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "pupil_modulus_50.0",
+      "status": "PASS",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "pupil_dc_50.0",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "complete_pupil_no_hidden_circle",
+      "status": "PASS",
+      "error": 1.3506446028928517e-15,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "inputs_not_mutated",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "nominal_cutoff_metadata",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "independent_modes_63x48_-50.0.field",
+      "status": "PASS",
+      "error": 9.001286049039985e-15,
+      "tolerance": 1e-12,
+      "detail": "Direct finite plane-wave sum, independent kz-k, no phase/scale/shift fitting."
+    },
+    {
+      "name": "independent_modes_63x48_-50.0.intensity",
+      "status": "PASS",
+      "error": 1.2545520178264269e-14,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "independent_modes_63x48_0.0.field",
+      "status": "PASS",
+      "error": 1.9753313816493017e-15,
+      "tolerance": 1e-12,
+      "detail": "Direct finite plane-wave sum, independent kz-k, no phase/scale/shift fitting."
+    },
+    {
+      "name": "independent_modes_63x48_0.0.intensity",
+      "status": "PASS",
+      "error": 2.220446049250313e-15,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "independent_modes_63x48_50.0.field",
+      "status": "PASS",
+      "error": 8.728367315604607e-15,
+      "tolerance": 1e-12,
+      "detail": "Direct finite plane-wave sum, independent kz-k, no phase/scale/shift fitting."
+    },
+    {
+      "name": "independent_modes_63x48_50.0.intensity",
+      "status": "PASS",
+      "error": 1.27675647831893e-14,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "complex_target_distinguishes_sign_63x48",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "independent_modes_64x47_-50.0.field",
+      "status": "PASS",
+      "error": 2.0044445646569716e-14,
+      "tolerance": 1e-12,
+      "detail": "Direct finite plane-wave sum, independent kz-k, no phase/scale/shift fitting."
+    },
+    {
+      "name": "independent_modes_64x47_-50.0.intensity",
+      "status": "PASS",
+      "error": 2.1316282072803006e-14,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "independent_modes_64x47_0.0.field",
+      "status": "PASS",
+      "error": 9.992007221626409e-16,
+      "tolerance": 1e-12,
+      "detail": "Direct finite plane-wave sum, independent kz-k, no phase/scale/shift fitting."
+    },
+    {
+      "name": "independent_modes_64x47_0.0.intensity",
+      "status": "PASS",
+      "error": 1.3322676295501878e-15,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "independent_modes_64x47_50.0.field",
+      "status": "PASS",
+      "error": 2.0265752114853506e-14,
+      "tolerance": 1e-12,
+      "detail": "Direct finite plane-wave sum, independent kz-k, no phase/scale/shift fitting."
+    },
+    {
+      "name": "independent_modes_64x47_50.0.intensity",
+      "status": "PASS",
+      "error": 2.1316282072803006e-14,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "complex_target_distinguishes_sign_64x47",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "grid_16.circle_coverage",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "grid_16.intensity_sampling",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "grid_32.circle_coverage",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "grid_32.intensity_sampling",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "convergence.profile_relative_max",
+      "status": "PASS",
+      "error": 9.384712397268231e-05,
+      "tolerance": 0.001,
+      "detail": "Raw fine profile linearly interpolated to coarse sample centers in [-6,6] um; denominator is shared nominal I_ref."
+    },
+    {
+      "name": "convergence.cd_um",
+      "status": "PASS",
+      "error": 0.0012176359336546483,
+      "tolerance": 0.01,
+      "detail": ""
+    },
+    {
+      "name": "convergence.nils_relative",
+      "status": "PASS",
+      "error": 0.00016363473213291835,
+      "tolerance": 0.01,
+      "detail": ""
+    },
+    {
+      "name": "convergence.status",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    },
+    {
+      "name": "complex_leakage.field_superposition",
+      "status": "PASS",
+      "error": 2.762516498527099e-16,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "complex_leakage.intensity_after_superposition",
+      "status": "PASS",
+      "error": 4.440892098500626e-16,
+      "tolerance": 1e-12,
+      "detail": ""
+    },
+    {
+      "name": "complex_leakage_interference_retained",
+      "status": "PASS",
+      "error": 0.0,
+      "tolerance": 0.0,
+      "detail": ""
+    }
+  ],
+  "details": {
+    "original_source_sha256": {
+      "README.md": "32d9b9c9f6d83bb7ed03364eced06fa9c35d14f3202e4d62dfa38425ac7bb47a",
+      "capture_original_baseline.py": "eb0c094d16f17704b70b71da41961ac6d0ce30a6803daea5103acde0aba909f5",
+      "coherent_imaging_2d.py": "fd9ea2ae74dab81cdd32a38cbebd8b980f734a377d14e2d22786a79f9b0e4114",
+      "dmd_model_2d.py": "4bdb344f7c370db2c9ac43acf98130bd4b3f8f4457c4be7d8c1587712d5f62c6",
+      "round2_regression.py": "c82b4982a42c11bd3b0ea5e4b271927f3ead8ac2bcad150332eaa52954b7d14e",
+      "run_dmd_2d_validation.py": "68e224a898783265e48068cfe1948c56bec5e6be0bd648ab7719984a27df027a",
+      "test_leakage_validation.py": "b4f5c2dffa3d692501ac843adafb26c1fe064792186260af534b8fcfabc0a01c",
+      "textbook_dense_lines_aerial_image.py": "f11650857915bb3bf54da8a3117eaa765eaa1ab4a078032013e640b830282fc8",
+      "verify_run_switches.py": "ce3f24d55a0865d72ce53a8b70bb1c9ae5488f70ad6888fb578b23957a06a129"
+    },
+    "baseline_workpoint": {
+      "threshold_mode": "target_cd",
+      "target_cd_um": 6.0,
+      "nominal_baseline_cd_um": 6.0,
+      "nominal_baseline_status": "VALID",
+      "reference_intensity": 1.0546765820801907,
+      "nominal_threshold_intensity": 0.20382631104900517,
+      "nominal_threshold_fraction": 0.1932595399501414,
+      "design_left_intensity": 0.20382631104900517,
+      "design_right_intensity": 0.20382631104900517,
+      "intensity_symmetry_tolerance": 1.0546765820801907e-10,
+      "cd_tolerance_um": 6.000000000000001e-09
+    },
+    "phase_only_energy": {
+      "input_discrete_energy": 820.7218625170142,
+      "cases": [
+        {
+          "defocus_um": -50.0,
+          "output_discrete_energy": 55.3553681359184
+        },
+        {
+          "defocus_um": -25.0,
+          "output_discrete_energy": 55.35536813591838
+        },
+        {
+          "defocus_um": 0.0,
+          "output_discrete_energy": 55.35536813591838
+        },
+        {
+          "defocus_um": 25.0,
+          "output_discrete_energy": 55.35536813591838
+        },
+        {
+          "defocus_um": 50.0,
+          "output_discrete_energy": 55.35536813591838
+        }
+      ]
+    },
+    "independent_modes": [
+      {
+        "nx": 63,
+        "ny": 48,
+        "dx_um": 1.0,
+        "dy_um": 1.25,
+        "sign_intensity_max_difference": 0.3039747753539635
+      },
+      {
+        "nx": 64,
+        "ny": 47,
+        "dx_um": 1.0,
+        "dy_um": 1.25,
+        "sign_intensity_max_difference": 0.30435314550974857
+      }
+    ],
+    "convergence": {
+      "defocus_um": 50.0,
+      "active_side_ratio": 0.95,
+      "common_workpoint": {
+        "threshold_mode": "target_cd",
+        "target_cd_um": 6.0,
+        "nominal_baseline_cd_um": 6.0,
+        "nominal_baseline_status": "VALID",
+        "reference_intensity": 1.0546765820801907,
+        "nominal_threshold_intensity": 0.20382631104900517,
+        "nominal_threshold_fraction": 0.1932595399501414,
+        "design_left_intensity": 0.20382631104900517,
+        "design_right_intensity": 0.20382631104900517,
+        "intensity_symmetry_tolerance": 1.0546765820801907e-10,
+        "cd_tolerance_um": 6.000000000000001e-09
+      },
+      "grids": [
+        {
+          "samples_per_mirror": 16,
+          "nx": 1024,
+          "ny": 512,
+          "dx_um": 0.09375,
+          "dy_um": 0.09375,
+          "lx_um": 96.0,
+          "ly_um": 48.0,
+          "dfx_cyc_per_um": 0.010416666666666666,
+          "dfy_cyc_per_um": 0.020833333333333332,
+          "cutoff_cyc_per_um": 0.16049382716049382,
+          "nyquist_cyc_per_um": 5.333333333333333,
+          "intensity_max_bandwidth_cyc_per_um": 0.32098765432098764,
+          "samples_per_shortest_intensity_period": 33.23076923076923,
+          "profile_row": 255,
+          "profile_y_um": -0.046875
+        },
+        {
+          "samples_per_mirror": 32,
+          "nx": 2048,
+          "ny": 1024,
+          "dx_um": 0.046875,
+          "dy_um": 0.046875,
+          "lx_um": 96.0,
+          "ly_um": 48.0,
+          "dfx_cyc_per_um": 0.010416666666666666,
+          "dfy_cyc_per_um": 0.020833333333333332,
+          "cutoff_cyc_per_um": 0.16049382716049382,
+          "nyquist_cyc_per_um": 10.666666666666666,
+          "intensity_max_bandwidth_cyc_per_um": 0.32098765432098764,
+          "samples_per_shortest_intensity_period": 66.46153846153847,
+          "profile_row": 511,
+          "profile_y_um": -0.0234375
+        }
+      ],
+      "coarse_metrics": {
+        "reference_intensity": 1.0546765820801907,
+        "threshold_intensity": 0.20382631104900517,
+        "fixed_left_edge_um": -3.0,
+        "fixed_right_edge_um": 3.0,
+        "fixed_cd_um": 6.0,
+        "cd_error_to_design_um": 0.0,
+        "left_error_to_design_um": 0.0,
+        "right_error_to_design_um": 0.0,
+        "design_edge_nils": 7.2484499223634895,
+        "nils_status": "VALID",
+        "on_center_intensity": 1.005103522690333,
+        "off_center_intensity": 0.06546643629161653,
+        "center_contrast": 0.8776979762184409,
+        "contrast_status": "VALID",
+        "dark_max_intensity": 0.06540819609621934,
+        "dark_exceeds_threshold": false,
+        "dark_sample_left_um": 4.546875,
+        "dark_sample_right_um": 7.453125,
+        "search_left_um": -6.0,
+        "search_right_um": 6.0,
+        "threshold_status": "VALID"
+      },
+      "fine_metrics": {
+        "reference_intensity": 1.0546765820801907,
+        "threshold_intensity": 0.20382631104900517,
+        "fixed_left_edge_um": -2.9993911820331727,
+        "fixed_right_edge_um": 2.9993911820331722,
+        "fixed_cd_um": 5.998782364066345,
+        "cd_error_to_design_um": -0.0012176359336546483,
+        "left_error_to_design_um": 0.0006088179668273241,
+        "right_error_to_design_um": -0.0006088179668277682,
+        "design_edge_nils": 7.249636214643534,
+        "nils_status": "VALID",
+        "on_center_intensity": 1.0052878697469176,
+        "off_center_intensity": 0.06549792957946542,
+        "center_contrast": 0.8776638061119801,
+        "contrast_status": "VALID",
+        "dark_max_intensity": 0.0654833510196147,
+        "dark_exceeds_threshold": false,
+        "dark_sample_left_um": 4.5234375,
+        "dark_sample_right_um": 7.4765625,
+        "search_left_um": -6.0,
+        "search_right_um": 6.0,
+        "threshold_status": "VALID"
+      },
+      "note": "More samples per mirror increases Nyquist and aperture quadrature accuracy; longer windows refine frequency spacing. Integer-period boundaries are retained. This is not isolated-pattern window convergence."
+    }
+  }
+}

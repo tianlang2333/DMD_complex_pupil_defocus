@@ -1,0 +1,59 @@
+{
+  "captured_date": "2026-09-29",
+  "original_files": [
+    {
+      "file_name": "README.md",
+      "library_file_id": "libfile_a14328fad56081918530f346abe0e73c",
+      "file_id": "file_000000007f108209a8b7c0b392b8ce81",
+      "version": 0
+    },
+    {
+      "file_name": "capture_original_baseline.py",
+      "library_file_id": "libfile_5a9a9b3a3fd88191bb4505dd76d71fd0",
+      "file_id": "file_00000000d12482098471cfd2a1071180",
+      "version": 0
+    },
+    {
+      "file_name": "verify_run_switches.py",
+      "library_file_id": "libfile_91cfe902d6ec81918aafe8e58b097260",
+      "file_id": "file_000000005a7882118da2e0fc1ec3ab60",
+      "version": 0
+    },
+    {
+      "file_name": "round2_regression.py",
+      "library_file_id": "libfile_f810d32107708191b1a3aec11a463094",
+      "file_id": "file_00000000c8688209af141c232d3dd082",
+      "version": 0
+    },
+    {
+      "file_name": "test_leakage_validation.py",
+      "library_file_id": "libfile_c93e6a7aa414819192c6a65d6f501c3a",
+      "file_id": "file_0000000034888211821dc5ba9d8c6ded",
+      "version": 0
+    },
+    {
+      "file_name": "textbook_dense_lines_aerial_image.py",
+      "library_file_id": "libfile_b7c89d45e0e88191ac4de4f609046869",
+      "file_id": "file_00000000f5548208bde23462cc761696",
+      "version": 0
+    },
+    {
+      "file_name": "coherent_imaging_2d.py",
+      "library_file_id": "libfile_4cd8fc732b048191974854263dfe42b4",
+      "file_id": "file_00000000409482119ec754825ac5e758",
+      "version": 0
+    },
+    {
+      "file_name": "run_dmd_2d_validation.py",
+      "library_file_id": "libfile_e3053b08f18c81918976f279f9ca7cbe",
+      "file_id": "file_000000008a208211a32ca441176c147c",
+      "version": 0
+    },
+    {
+      "file_name": "dmd_model_2d.py",
+      "library_file_id": "libfile_2ca2197ff33481918537c4371eee4360",
+      "file_id": "file_00000000435c8211bb126088ff367913",
+      "version": 0
+    }
+  ]
+}

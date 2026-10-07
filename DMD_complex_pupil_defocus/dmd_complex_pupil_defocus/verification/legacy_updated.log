@@ -1,0 +1,13 @@
+[Internal validation] PASS: FFT往返误差; value=1.346360e-15, criterion < 1.000000e-12
+[Internal validation] PASS: 全通瞳孔恢复输入; value=1.346360e-15, criterion < 1.000000e-12
+[Internal validation] PASS: 常数场验证; value=2.220446e-16, criterion < 1.000000e-12
+[Internal validation] PASS: 左右对称性; value=5.771657e-16, criterion < 1.000000e-10
+[Internal validation] PASS: 上下对称性; value=7.214571e-16, criterion < 1.000000e-10
+[Internal validation] PASS: 能量不增加; value=7.984092e-01, criterion <= 1.000000e+00
+[1D-to-2D cross-validation] Loading: /workspace/scratch/cb120bfe3ccb/dmd_complex_pupil_defocus/textbook_dense_lines_aerial_image.py
+Internal checks: 6 / 6
+Textbook: COMPLETED 已调用textbook_dense_lines_aerial_image.py的真实API；nm/um已换算，最高通过级次=3，中央周期同坐标比较
+Textbook RMSE: 0.0008177803256570893
+Convergence maximum relative change: 0.005441794261206576
+Sampling N_CD / raster error: [(3.5, -0.8571428571428577), (2.0, 0.0), (1.0, 0.0)]
+Baseline saved: /workspace/scratch/cb120bfe3ccb/dmd_complex_pupil_defocus/verification/legacy_updated

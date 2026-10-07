@@ -1,0 +1,109 @@
+{
+  "legacy_numeric_exact_equal": true,
+  "legacy_arrays": [
+    {
+      "key": "base_x_um",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "base_profile",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "textbook_x_um",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "textbook_intensity",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "textbook_dmd_intensity",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "cross_x_um",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "cross_center_horizontal_raw",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "na_0_profile",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "na_1_profile",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "na_2_profile",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "sampling_0_x_um",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "sampling_0_ideal_profile",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "sampling_0_dmd_profile",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "sampling_1_x_um",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "sampling_1_ideal_profile",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "sampling_1_dmd_profile",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "sampling_2_x_um",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "sampling_2_ideal_profile",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "sampling_2_dmd_profile",
+      "max_absolute_error": 0.0,
+      "status": "PASS"
+    }
+  ],
+  "legacy_checks": 6,
+  "leakage_checks": 47,
+  "leakage_exact_equal_to_original": true,
+  "textbook_cross_validation_rmse": 0.0008177803256570893,
+  "historical_round2": {
+    "status": "SKIPPED",
+    "reason": "Uploaded files omit round2_baseline; not reconstructed or claimed as historical proof."
+  },
+  "status": "PASS"
+}

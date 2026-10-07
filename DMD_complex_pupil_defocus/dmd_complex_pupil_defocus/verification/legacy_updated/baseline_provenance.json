@@ -1,0 +1,15 @@
+{
+  "source_directory": "/workspace/scratch/cb120bfe3ccb/dmd_complex_pupil_defocus",
+  "textbook_path": "/workspace/scratch/cb120bfe3ccb/dmd_complex_pupil_defocus/textbook_dense_lines_aerial_image.py",
+  "source_sha256": {
+    "capture_original_baseline.py": "eb0c094d16f17704b70b71da41961ac6d0ce30a6803daea5103acde0aba909f5",
+    "coherent_imaging_2d.py": "6081f789cb94c8b5926a2490736a7b1d40ce375cfcd3be4821d72e19391eb336",
+    "dmd_model_2d.py": "97dafc81f42976e291870376869d6d237d93e20549f5e85d5560d7d5323b5828",
+    "projection_lens_2d.py": "4fb4644f11edc1590ee402992381e4589a21c1a41fca25e5c537c6445556e1ea",
+    "round2_regression.py": "c82b4982a42c11bd3b0ea5e4b271927f3ead8ac2bcad150332eaa52954b7d14e",
+    "run_dmd_2d_validation.py": "20e249254856aaa455eb6246e8d4b2a310b1ab2f3dffb8685cab0dc37185b7ad",
+    "test_leakage_validation.py": "b4f5c2dffa3d692501ac843adafb26c1fe064792186260af534b8fcfabc0a01c",
+    "textbook_dense_lines_aerial_image.py": "f11650857915bb3bf54da8a3117eaa765eaa1ab4a078032013e640b830282fc8",
+    "verify_run_switches.py": "04a3b0f58d731c54abce5742a583a7d553a8898b168e25a4ae81b6ea31aebfe3"
+  }
+}

@@ -1,0 +1,2202 @@
+{
+  "combined": {
+    "mode": "combined",
+    "status": "PASS",
+    "source_sha256": "f25d887b6c21333a99d2cb2b8da2e131ff9ddfdc7b3dfec1a3200d25a3f0a51e",
+    "test_case_kind": "current_main_defaults",
+    "original_flags": {
+      "run_textbook_validation": false,
+      "run_na_experiment": false,
+      "run_sampling_experiment": false,
+      "run_original_cross": false,
+      "run_convergence": false,
+      "run_leakage_sweep": true,
+      "run_phase_sweep": false,
+      "run_dose_check": true,
+      "run_cross_leakage": true,
+      "run_defocus_experiment": true
+    },
+    "flags": {
+      "run_textbook_validation": false,
+      "run_na_experiment": false,
+      "run_sampling_experiment": false,
+      "run_original_cross": false,
+      "run_convergence": false,
+      "run_leakage_sweep": true,
+      "run_phase_sweep": false,
+      "run_dose_check": true,
+      "run_cross_leakage": true,
+      "run_defocus_experiment": true
+    },
+    "self_checks": {
+      "passed": 57,
+      "total": 57
+    },
+    "defocus_branch_calls": 1,
+    "data_checks": [
+      "single_shared_reference",
+      "pure_defocus_response_independent",
+      "npz_allow_pickle_false",
+      "same_focus_independent_of_other_main_switches"
+    ],
+    "cross_mode_max_absolute_errors": {
+      "x_um": 0.0,
+      "y_um": 0.0,
+      "defocus_values_um": 0.0,
+      "raw_profiles": 0.0,
+      "image_field_center_rows": 0.0,
+      "baseline_raw_profile": 0.0,
+      "baseline_image_field_center_row": 0.0,
+      "reference_intensity": 0.0,
+      "nominal_threshold_intensity": 0.0,
+      "representative_image_field": 0.0,
+      "representative_raw_intensity": 0.0,
+      "representative_pupil": 0.0
+    },
+    "stale_files_unchanged_excluded": [
+      "figure_05_na_sweep.png",
+      "validation_metrics.csv",
+      "figure_leakage_phase.png"
+    ],
+    "generated_manifest": [
+      "figure_leakage_ratio.png",
+      "figure_leakage_dose.png",
+      "leakage_metrics.csv",
+      "figure_leakage_cross.png",
+      "leakage_representative_data.npz",
+      "defocus_metrics.csv",
+      "defocus_representative_data.npz",
+      "figure_defocus_comparison.png",
+      "figure_defocus_pupil.png",
+      "validation_summary.txt"
+    ]
+  },
+  "defocus-cases": {
+    "mode": "defocus-cases",
+    "status": "PASS",
+    "source_sha256": "f25d887b6c21333a99d2cb2b8da2e131ff9ddfdc7b3dfec1a3200d25a3f0a51e",
+    "absolute_tolerance": 1e-12,
+    "checks": [
+      {
+        "name": "base_states_0_unchanged",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "base_field_0_unchanged",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "base_states_1_unchanged",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "base_field_1_unchanged",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "base_field_squared_is_raw_profile",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "single_states_0_unchanged",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "single_field_0_unchanged",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "single_states_1_unchanged",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "single_field_1_unchanged",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "single_field_squared_is_raw_profile",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "single_common_reference_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "single_common_nominal_threshold_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "single_common_baseline_raw_profile",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "single_common_baseline_image_field_center_row",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "single_25_raw_profiles",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "single_25_image_field_center_rows",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "single_25_fixed_left_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "single_25_fixed_right_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "single_25_fixed_cd_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "single_25_design_edge_nils",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "single_25_center_contrast",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "single_25_dark_max_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "single_25_status",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_states_0_unchanged",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_field_0_unchanged",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_states_1_unchanged",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_field_1_unchanged",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_field_squared_is_raw_profile",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_common_reference_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_common_nominal_threshold_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_common_baseline_raw_profile",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_common_baseline_image_field_center_row",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_-25_raw_profiles",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_-25_image_field_center_rows",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_-25_fixed_left_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_-25_fixed_right_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_-25_fixed_cd_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_-25_design_edge_nils",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_-25_center_contrast",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_-25_dark_max_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_-25_status",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_25_raw_profiles",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_25_image_field_center_rows",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_25_fixed_left_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_25_fixed_right_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_25_fixed_cd_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_25_design_edge_nils",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_25_center_contrast",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_25_dark_max_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "no_zero_25_status",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_states_0_unchanged",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_field_0_unchanged",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_states_1_unchanged",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_field_1_unchanged",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_field_squared_is_raw_profile",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_common_reference_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_common_nominal_threshold_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_common_baseline_raw_profile",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_common_baseline_image_field_center_row",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_50_raw_profiles",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_50_image_field_center_rows",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_50_fixed_left_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_50_fixed_right_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_50_fixed_cd_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_50_design_edge_nils",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_50_center_contrast",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_50_dark_max_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_50_status",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_25_raw_profiles",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_25_image_field_center_rows",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_25_fixed_left_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_25_fixed_right_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_25_fixed_cd_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_25_design_edge_nils",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_25_center_contrast",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_25_dark_max_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_25_status",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_0_raw_profiles",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_0_image_field_center_rows",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_0_fixed_left_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_0_fixed_right_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_0_fixed_cd_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_0_design_edge_nils",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_0_center_contrast",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_0_dark_max_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_0_status",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_-25_raw_profiles",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_-25_image_field_center_rows",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_-25_fixed_left_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_-25_fixed_right_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_-25_fixed_cd_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_-25_design_edge_nils",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_-25_center_contrast",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_-25_dark_max_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_-25_status",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_-50_raw_profiles",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_-50_image_field_center_rows",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_-50_fixed_left_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_-50_fixed_right_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_-50_fixed_cd_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_-50_design_edge_nils",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_-50_center_contrast",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_-50_dark_max_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "reverse_-50_status",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_states_0_unchanged",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_field_0_unchanged",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_states_1_unchanged",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_field_1_unchanged",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_field_squared_is_raw_profile",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_common_reference_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_common_nominal_threshold_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_common_baseline_raw_profile",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_common_baseline_image_field_center_row",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_-50_raw_profiles",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_-50_image_field_center_rows",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_-50_fixed_left_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_-50_fixed_right_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_-50_fixed_cd_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_-50_design_edge_nils",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_-50_center_contrast",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_-50_dark_max_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_-50_status",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_-25_raw_profiles",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_-25_image_field_center_rows",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_-25_fixed_left_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_-25_fixed_right_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_-25_fixed_cd_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_-25_design_edge_nils",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_-25_center_contrast",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_-25_dark_max_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_-25_status",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_0_raw_profiles",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_0_image_field_center_rows",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_0_fixed_left_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_0_fixed_right_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_0_fixed_cd_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_0_design_edge_nils",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_0_center_contrast",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_0_dark_max_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_0_status",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_25_raw_profiles",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_25_image_field_center_rows",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_25_fixed_left_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_25_fixed_right_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_25_fixed_cd_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_25_design_edge_nils",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_25_center_contrast",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_25_dark_max_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_25_status",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_50_raw_profiles",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_50_image_field_center_rows",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_50_fixed_left_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_50_fixed_right_edge_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_50_fixed_cd_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_50_design_edge_nils",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_50_center_contrast",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_50_dark_max_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "repeat_50_status",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "complex_leakage_states_0_unchanged",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "complex_leakage_field_0_unchanged",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "complex_leakage_states_1_unchanged",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "complex_leakage_field_1_unchanged",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "complex_leakage_field_squared_is_raw_profile",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "complex_leakage_common_reference_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "complex_leakage_common_nominal_threshold_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "complex_leakage_common_baseline_raw_profile",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "complex_leakage_sum_fields_then_square",
+        "value": 3.1031676915590914e-16,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "complex_leakage_raw_intensity",
+        "value": 4.440892098500626e-16,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "complex_leakage_interference_is_present",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_states_0_unchanged",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_field_0_unchanged",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_states_1_unchanged",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_field_1_unchanged",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_field_squared_is_raw_profile",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_x_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_y_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_defocus_values_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_baseline_raw_profile_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_baseline_image_field_center_row_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_baseline_input_energy_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_baseline_output_energy_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_profile_row_index_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_profile_y_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_frequency_x_cyc_per_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_frequency_y_cyc_per_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_threshold_intensity_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_threshold_mode_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_target_cd_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_nominal_baseline_cd_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_nominal_baseline_status_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_reference_intensity_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_nominal_threshold_intensity_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_nominal_threshold_fraction_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_design_left_intensity_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_design_right_intensity_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_intensity_symmetry_tolerance_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_cd_tolerance_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_Nx_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_Ny_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_dx_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_dy_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_Lx_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_Ly_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_delta_fx_cyc_per_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_delta_fy_cyc_per_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_nominal_frequency_cutoff_cyc_per_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_intensity_bandlimit_cyc_per_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_nyquist_x_cyc_per_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_nyquist_y_cyc_per_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_intensity_shortest_period_samples_x_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_intensity_shortest_period_samples_y_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_nils_fit_samples_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_nils_polynomial_degree_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_nils_fit_sample_left_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_nils_fit_sample_right_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_reference_definition_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_representative_defocus_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_representative_image_field_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_representative_raw_intensity_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_representative_pupil_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_raw_profiles_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_image_field_center_rows_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_threshold_statuses_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_common_Iref",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_threshold_is_half_Iref",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "fixed_fraction_rows_report_mode",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_states_0_unchanged",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_field_0_unchanged",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_states_1_unchanged",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_field_1_unchanged",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_field_squared_is_raw_profile",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_x_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_y_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_defocus_values_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_baseline_raw_profile_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_baseline_image_field_center_row_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_baseline_input_energy_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_baseline_output_energy_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_profile_row_index_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_profile_y_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_frequency_x_cyc_per_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_frequency_y_cyc_per_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_threshold_intensity_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_threshold_mode_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_target_cd_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_nominal_baseline_cd_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_nominal_baseline_status_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_reference_intensity_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_nominal_threshold_intensity_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_nominal_threshold_fraction_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_design_left_intensity_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_design_right_intensity_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_intensity_symmetry_tolerance_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_cd_tolerance_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_Nx_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_Ny_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_dx_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_dy_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_Lx_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_Ly_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_delta_fx_cyc_per_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_delta_fy_cyc_per_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_nominal_frequency_cutoff_cyc_per_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_intensity_bandlimit_cyc_per_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_nyquist_x_cyc_per_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_nyquist_y_cyc_per_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_intensity_shortest_period_samples_x_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_intensity_shortest_period_samples_y_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_nils_fit_samples_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_nils_polynomial_degree_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_nils_fit_sample_left_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_nils_fit_sample_right_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_reference_definition_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_representative_defocus_um_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_representative_image_field_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_representative_raw_intensity_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_representative_pupil_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_raw_profiles_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_image_field_center_rows_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_single_threshold_statuses_pickle_free",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_profile_is_zero",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_metrics_stay_nan",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_retains_failure_reason",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "zero_response_saved_csv_nan_and_reason",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "previous_result_unchanged_x_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "previous_result_unchanged_y_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "previous_result_unchanged_defocus_values_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "previous_result_unchanged_baseline_raw_profile",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "previous_result_unchanged_baseline_image_field_center_row",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "previous_result_unchanged_frequency_x_cyc_per_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "previous_result_unchanged_frequency_y_cyc_per_um",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "previous_result_unchanged_representative_image_field",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "previous_result_unchanged_representative_raw_intensity",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "previous_result_unchanged_representative_pupil",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "previous_result_unchanged_raw_profiles",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "previous_result_unchanged_image_field_center_rows",
+        "value": 0.0,
+        "limit": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "name": "previous_result_unchanged_threshold_statuses",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "invalid_list_rejected_empty",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "invalid_list_rejected_bool",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "invalid_list_rejected_complex",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      },
+      {
+        "name": "invalid_list_rejected_nonfinite",
+        "value": 0.0,
+        "limit": 0,
+        "status": "PASS"
+      }
+    ],
+    "wrong_incoherent_intensity_max_difference": 0.034226338532347356,
+    "cases": [
+      "base",
+      "single",
+      "no_zero",
+      "reverse",
+      "repeat",
+      "complex_leakage",
+      "fixed_fraction",
+      "zero_response_single"
+    ]
+  },
+  "defocus-disabled": {
+    "mode": "defocus-disabled",
+    "status": "PASS",
+    "source_sha256": "f25d887b6c21333a99d2cb2b8da2e131ff9ddfdc7b3dfec1a3200d25a3f0a51e",
+    "test_case_kind": "flag_only_override",
+    "original_flags": {
+      "run_textbook_validation": false,
+      "run_na_experiment": false,
+      "run_sampling_experiment": false,
+      "run_original_cross": false,
+      "run_convergence": false,
+      "run_leakage_sweep": true,
+      "run_phase_sweep": false,
+      "run_dose_check": true,
+      "run_cross_leakage": true,
+      "run_defocus_experiment": true
+    },
+    "flags": {
+      "run_textbook_validation": false,
+      "run_na_experiment": false,
+      "run_sampling_experiment": false,
+      "run_original_cross": false,
+      "run_convergence": false,
+      "run_leakage_sweep": false,
+      "run_phase_sweep": false,
+      "run_dose_check": false,
+      "run_cross_leakage": false,
+      "run_defocus_experiment": false
+    },
+    "self_checks": {
+      "passed": 53,
+      "total": 53
+    },
+    "defocus_branch_calls": 0,
+    "data_checks": [
+      "invalid_disabled_list_not_validated",
+      "disabled_sweep_not_called",
+      "disabled_defocus_outputs_not_inspected"
+    ],
+    "cross_mode_max_absolute_errors": {},
+    "stale_files_unchanged_excluded": [
+      "figure_05_na_sweep.png",
+      "validation_metrics.csv",
+      "figure_leakage_phase.png",
+      "leakage_metrics.csv",
+      "leakage_representative_data.npz",
+      "figure_leakage_ratio.png",
+      "figure_leakage_dose.png",
+      "figure_leakage_cross.png",
+      "defocus_metrics.csv",
+      "defocus_representative_data.npz",
+      "figure_defocus_comparison.png",
+      "figure_defocus_pupil.png"
+    ],
+    "generated_manifest": [
+      "validation_summary.txt"
+    ]
+  },
+  "defocus-only": {
+    "mode": "defocus-only",
+    "status": "PASS",
+    "source_sha256": "f25d887b6c21333a99d2cb2b8da2e131ff9ddfdc7b3dfec1a3200d25a3f0a51e",
+    "test_case_kind": "flag_only_override",
+    "original_flags": {
+      "run_textbook_validation": false,
+      "run_na_experiment": false,
+      "run_sampling_experiment": false,
+      "run_original_cross": false,
+      "run_convergence": false,
+      "run_leakage_sweep": true,
+      "run_phase_sweep": false,
+      "run_dose_check": true,
+      "run_cross_leakage": true,
+      "run_defocus_experiment": true
+    },
+    "flags": {
+      "run_textbook_validation": false,
+      "run_na_experiment": false,
+      "run_sampling_experiment": false,
+      "run_original_cross": false,
+      "run_convergence": false,
+      "run_leakage_sweep": false,
+      "run_phase_sweep": false,
+      "run_dose_check": false,
+      "run_cross_leakage": false,
+      "run_defocus_experiment": true
+    },
+    "self_checks": {
+      "passed": 53,
+      "total": 53
+    },
+    "defocus_branch_calls": 1,
+    "data_checks": [
+      "single_shared_reference",
+      "pure_defocus_response_independent",
+      "npz_allow_pickle_false"
+    ],
+    "cross_mode_max_absolute_errors": {},
+    "stale_files_unchanged_excluded": [
+      "figure_05_na_sweep.png",
+      "validation_metrics.csv",
+      "figure_leakage_phase.png",
+      "leakage_metrics.csv",
+      "leakage_representative_data.npz",
+      "figure_leakage_ratio.png",
+      "figure_leakage_dose.png",
+      "figure_leakage_cross.png"
+    ],
+    "generated_manifest": [
+      "defocus_metrics.csv",
+      "defocus_representative_data.npz",
+      "figure_defocus_comparison.png",
+      "figure_defocus_pupil.png",
+      "validation_summary.txt"
+    ]
+  },
+  "historical-default": {
+    "mode": "default",
+    "test_case_kind": "explicit_historical_fixture",
+    "status": "PASS",
+    "source_sha256": "7d80a257e5aafa95c62a71be84bfa5eed32445587c96809847eddeb9e1f6436e",
+    "flags": {
+      "run_textbook_validation": false,
+      "run_na_experiment": false,
+      "run_sampling_experiment": false,
+      "run_original_cross": false,
+      "run_convergence": false,
+      "run_leakage_sweep": true,
+      "run_phase_sweep": true,
+      "run_dose_check": true,
+      "run_cross_leakage": false,
+      "run_defocus_experiment": false
+    },
+    "self_checks": {
+      "passed": 53,
+      "total": 53
+    },
+    "data_checks": [
+      "common_nominal_reference",
+      "effective_threshold_T0_over_s",
+      "nominal_and_same_dose_cd_deltas",
+      "same_dose_baseline_status",
+      "dose_preserves_raw_centers_contrast_nils_darkmax",
+      "dose_s1_matches_response_scan",
+      "npz_retains_complex_fields",
+      "dose_npz_profiles_reused_without_per_s_copies",
+      "dose_npz_profile_keys_resolve_to_field_intensity"
+    ],
+    "cache_input_checks": [],
+    "legacy_disabled_guard_calls": 0,
+    "leakage_propagations": [
+      6
+    ],
+    "stale_files_unchanged_excluded": [
+      "figure_05_na_sweep.png",
+      "validation_metrics.csv"
+    ],
+    "generated_manifest": [
+      "figure_leakage_ratio.png",
+      "figure_leakage_phase.png",
+      "figure_leakage_dose.png",
+      "leakage_metrics.csv",
+      "leakage_representative_data.npz",
+      "validation_summary.txt"
+    ]
+  },
+  "historical-disabled": {
+    "mode": "disabled",
+    "test_case_kind": "explicit_historical_fixture",
+    "status": "PASS",
+    "source_sha256": "7d80a257e5aafa95c62a71be84bfa5eed32445587c96809847eddeb9e1f6436e",
+    "flags": {
+      "run_textbook_validation": false,
+      "run_na_experiment": false,
+      "run_sampling_experiment": false,
+      "run_original_cross": false,
+      "run_convergence": false,
+      "run_leakage_sweep": false,
+      "run_phase_sweep": false,
+      "run_dose_check": false,
+      "run_cross_leakage": false,
+      "run_defocus_experiment": false
+    },
+    "self_checks": {
+      "passed": 53,
+      "total": 53
+    },
+    "data_checks": [],
+    "cache_input_checks": [],
+    "legacy_disabled_guard_calls": 0,
+    "leakage_propagations": [
+      0
+    ],
+    "stale_files_unchanged_excluded": [
+      "figure_05_na_sweep.png",
+      "validation_metrics.csv",
+      "figure_leakage_ratio.png",
+      "figure_leakage_phase.png",
+      "figure_leakage_dose.png",
+      "leakage_metrics.csv",
+      "leakage_representative_data.npz"
+    ],
+    "generated_manifest": [
+      "validation_summary.txt"
+    ]
+  },
+  "historical-dose-only": {
+    "mode": "dose-only",
+    "test_case_kind": "explicit_historical_fixture",
+    "status": "PASS",
+    "source_sha256": "7d80a257e5aafa95c62a71be84bfa5eed32445587c96809847eddeb9e1f6436e",
+    "flags": {
+      "run_textbook_validation": false,
+      "run_na_experiment": false,
+      "run_sampling_experiment": false,
+      "run_original_cross": false,
+      "run_convergence": false,
+      "run_leakage_sweep": false,
+      "run_phase_sweep": false,
+      "run_dose_check": true,
+      "run_cross_leakage": false,
+      "run_defocus_experiment": false
+    },
+    "self_checks": {
+      "passed": 53,
+      "total": 53
+    },
+    "data_checks": [
+      "common_nominal_reference",
+      "effective_threshold_T0_over_s",
+      "nominal_and_same_dose_cd_deltas",
+      "same_dose_baseline_status",
+      "dose_preserves_raw_centers_contrast_nils_darkmax",
+      "npz_retains_complex_fields",
+      "dose_npz_profiles_reused_without_per_s_copies",
+      "dose_npz_profile_keys_resolve_to_field_intensity"
+    ],
+    "cache_input_checks": [
+      "eta_true_rho_zero_rejected_before_cache_reuse"
+    ],
+    "legacy_disabled_guard_calls": 0,
+    "leakage_propagations": [
+      2
+    ],
+    "stale_files_unchanged_excluded": [
+      "figure_05_na_sweep.png",
+      "validation_metrics.csv",
+      "figure_leakage_ratio.png",
+      "figure_leakage_phase.png"
+    ],
+    "generated_manifest": [
+      "figure_leakage_dose.png",
+      "leakage_metrics.csv",
+      "leakage_representative_data.npz",
+      "validation_summary.txt"
+    ]
+  },
+  "historical-phase-only": {
+    "mode": "phase-only",
+    "test_case_kind": "explicit_historical_fixture",
+    "status": "PASS",
+    "source_sha256": "7d80a257e5aafa95c62a71be84bfa5eed32445587c96809847eddeb9e1f6436e",
+    "flags": {
+      "run_textbook_validation": false,
+      "run_na_experiment": false,
+      "run_sampling_experiment": false,
+      "run_original_cross": false,
+      "run_convergence": false,
+      "run_leakage_sweep": false,
+      "run_phase_sweep": true,
+      "run_dose_check": false,
+      "run_cross_leakage": false,
+      "run_defocus_experiment": false
+    },
+    "self_checks": {
+      "passed": 53,
+      "total": 53
+    },
+    "data_checks": [
+      "common_nominal_reference",
+      "effective_threshold_T0_over_s",
+      "nominal_and_same_dose_cd_deltas",
+      "same_dose_baseline_status",
+      "npz_retains_complex_fields"
+    ],
+    "cache_input_checks": [],
+    "legacy_disabled_guard_calls": 0,
+    "leakage_propagations": [
+      4
+    ],
+    "stale_files_unchanged_excluded": [
+      "figure_05_na_sweep.png",
+      "validation_metrics.csv",
+      "figure_leakage_ratio.png",
+      "figure_leakage_dose.png"
+    ],
+    "generated_manifest": [
+      "figure_leakage_phase.png",
+      "leakage_metrics.csv",
+      "leakage_representative_data.npz",
+      "validation_summary.txt"
+    ]
+  }
+}

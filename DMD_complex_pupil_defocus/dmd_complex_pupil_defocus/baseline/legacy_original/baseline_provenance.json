@@ -1,0 +1,14 @@
+{
+  "source_directory": "/workspace/scratch/cb120bfe3ccb/original",
+  "textbook_path": "/workspace/scratch/cb120bfe3ccb/original/textbook_dense_lines_aerial_image.py",
+  "source_sha256": {
+    "capture_original_baseline.py": "eb0c094d16f17704b70b71da41961ac6d0ce30a6803daea5103acde0aba909f5",
+    "coherent_imaging_2d.py": "fd9ea2ae74dab81cdd32a38cbebd8b980f734a377d14e2d22786a79f9b0e4114",
+    "dmd_model_2d.py": "4bdb344f7c370db2c9ac43acf98130bd4b3f8f4457c4be7d8c1587712d5f62c6",
+    "round2_regression.py": "c82b4982a42c11bd3b0ea5e4b271927f3ead8ac2bcad150332eaa52954b7d14e",
+    "run_dmd_2d_validation.py": "68e224a898783265e48068cfe1948c56bec5e6be0bd648ab7719984a27df027a",
+    "test_leakage_validation.py": "b4f5c2dffa3d692501ac843adafb26c1fe064792186260af534b8fcfabc0a01c",
+    "textbook_dense_lines_aerial_image.py": "f11650857915bb3bf54da8a3117eaa765eaa1ab4a078032013e640b830282fc8",
+    "verify_run_switches.py": "ce3f24d55a0865d72ce53a8b70bb1c9ae5488f70ad6888fb578b23957a06a129"
+  }
+}

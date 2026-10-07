@@ -1,0 +1,321 @@
+二维DMD相干空中像验证摘要
+==========================================
+
+模型边界：有限开口二值DMD等效复振幅 + 理想圆瞳 + 完全相干成像。
+全部长度坐标均为曝光面等效坐标，FFT采用周期边界和正交归一化。
+energy_transmission定义为离散场Σ|Uout|²/Σ|Uin|²的频谱能量比例；它不是DMD衍射效率、实际光功率透过率或曝光效率。
+NILS的边缘强度与导数采用设计边缘附近7点四次局部多项式拟合；阈值左右交点采用相邻采样点线性插值；周期漏光工作点模式见本次配置。
+
+一、内部数值自检
+- PASS: FFT往返误差; value=1.346360e-15; criterion < 1.000000e-12; max|IFFT(FFT(U))-U|
+- PASS: 全通瞳孔恢复输入; value=1.346360e-15; criterion < 1.000000e-12; P(fx,fy)=1
+- PASS: 常数场验证; value=2.220446e-16; criterion < 1.000000e-12; 真实DMD渲染：全部ON、active_side_ratio=1、全通瞳孔
+- PASS: 左右对称性; value=5.771657e-16; criterion < 1.000000e-10; 中心对称方孔与圆形瞳孔
+- PASS: 上下对称性; value=7.214571e-16; criterion < 1.000000e-10; 中心对称方孔与圆形瞳孔
+- PASS: 能量不增加; value=7.984092e-01; criterion <= 1.000000e+00; Eout/Ein <= 1+1e-12
+- PASS: leakage_zero_recovers_old_model; value=0.000000e+00; criterion <= 1.000000e-13; eta=1,rho=0 与原配置使用同一二维渲染/传播。
+- PASS: leakage_sqrt_ratio_and_replace; value=7.347881e-18; criterion <= 1.000000e-14; eta=.36,rho=.04,phi=pi/2 应得 Aon=.6,Aoff=.12j。
+- PASS: leakage_config_copy_preserves_geometry; value=0.000000e+00; criterion <= 0.000000e+00; 原冻结配置不变，返回配置副本。
+- PASS: leakage_invalid_parameters; value=0.000000e+00; criterion <= 0.000000e+00; 有限实数/范围校验：正确拒绝 17/17 项。
+- PASS: leakage_eta_intensity_scaling; value=2.220446e-16; criterion <= 3.000000e-13; 相同 rho,phi 下 I(eta=.37)=.37 I(eta=1)。
+- PASS: leakage_full_off_on_ratio; value=1.734723e-18; criterion <= 3.000000e-13; 有限开口不变，全 OFF/ON 原始强度比为 rho=.01。
+- PASS: leakage_complex_field_superposition; value=4.448509e-16; criterion <= 3.000000e-13; 总场一次传播等于 ON/OFF 基场传播后复数合成；不按强度相加。
+- PASS: leakage_nonzero_interference_term; value=0.000000e+00; criterion <= 0.000000e+00; 与错误的分态强度相加最大差=0.0311178819，预期>0.01。
+- PASS: leakage_phase_2pi_periodicity; value=0.000000e+00; criterion <= 3.000000e-13; phi 和 phi+2pi 在固定标尺上比较。
+- PASS: leakage_phase_sign_symmetry_real_pupil; value=6.661338e-16; criterion <= 3.000000e-13; 本轮实数基场/实偶圆瞳条件下 I(phi)=I(-phi)。
+- PASS: leakage_equal_complex_states_remove_modulation; value=0.000000e+00; criterion <= 3.000000e-13; Aon=Aoff，翻转状态矩阵不改变场；开口仍保留。
+- PASS: leakage_equal_states_retain_aperture; value=0.000000e+00; criterion <= 0.000000e+00; 相等双态不移除镜间隙及部分覆盖权重。
+- PASS: leakage_equal_modulus_is_not_equal_response; value=0.000000e+00; criterion <= 0.000000e+00; 同模反相仍有调制；与同相像强度最大差=0.813707256。
+- PASS: leakage_off_respects_fractional_aperture; value=0.000000e+00; criterion <= 1.000000e-14; 部分覆盖单元继续保留原开口权重，不能整体填满 OFF 像元。
+- PASS: leakage_off_does_not_fill_gaps; value=0.000000e+00; criterion <= 0.000000e+00; active_side_ratio=.8,spm=20；36864 个零间隙采样保持零。
+- PASS: leakage_eta_zero_and_invalid_metrics; value=0.000000e+00; criterion <= 0.000000e+00; 全零场 CD/NILS 为 NaN；状态=CENTER_BELOW_THRESHOLD。
+- PASS: leakage_fixed_threshold_not_renormalized; value=0.000000e+00; criterion <= 1.000000e-12; 解析三角形：基准 CD=4；缩放后固定阈值 CD=3；相对峰值 CD=4。
+- PASS: leakage_threshold_invalid_center_below; value=0.000000e+00; criterion <= 0.000000e+00; 无双边缘不得给零 CD 或截断边界；状态=CENTER_BELOW_THRESHOLD。
+- PASS: leakage_threshold_invalid_full_bright; value=0.000000e+00; criterion <= 0.000000e+00; 无双边缘不得给零 CD 或截断边界；状态=ALL_ABOVE_THRESHOLD。
+- PASS: leakage_threshold_invalid_tight_search; value=0.000000e+00; criterion <= 0.000000e+00; 无双边缘不得给零 CD 或截断边界；状态=ALL_ABOVE_THRESHOLD。
+- PASS: leakage_threshold_invalid_one_edge_missing; value=0.000000e+00; criterion <= 0.000000e+00; 无双边缘不得给零 CD 或截断边界；状态=MISSING_RIGHT_EDGE。
+- PASS: leakage_analytic_exact_midpoint_field_spm16; value=1.065702e-15; criterion <= 3.000000e-12; 独立有限 Fourier 和；中点修正已知，无位移拟合、无强度重缩放。
+- PASS: leakage_analytic_continuous_bound_spm16; value=9.937126e-05; criterion <= 1.007120e-04; 绝对强度误差由 2*B*delta+delta^2 界定；dx=0.09375 um，order=1。
+- PASS: leakage_analytic_exact_midpoint_field_spm32; value=1.350645e-15; criterion <= 3.000000e-12; 独立有限 Fourier 和；中点修正已知，无位移拟合、无强度重缩放。
+- PASS: leakage_analytic_continuous_bound_spm32; value=2.484946e-05; criterion <= 2.517621e-05; 绝对强度误差由 2*B*delta+delta^2 界定；dx=0.046875 um，order=1。
+- PASS: leakage_analytic_refinement_error_ratio; value=2.500669e-01; criterion <= 3.000000e-01; 中点采样 O(dx^2)：16→32 预期误差约 1/4；误差=9.93712596e-05,2.48494623e-05。
+- PASS: leakage_common_reference_preserved; value=0.000000e+00; criterion <= 0.000000e+00; 粗细采样评价返回完全相同的输入参考强度和固定阈值。
+- PASS: leakage_finite_aperture_profile_16_to_32; value=8.965718e-05; criterion <= 1.000000e-02; 有限开口 .95,rho=.01,phi=.7；固定 Iref=1.05513623,Ith=0.527568113；预设截面变化≤1%。
+- PASS: leakage_finite_aperture_cd_16_to_32; value=3.268224e-04; criterion <= 1.000000e-02; 固定阈值 CD：16=4.20795726,32=4.20828409 um；预设差≤.01 um。
+- PASS: leakage_finite_aperture_nils_16_to_32; value=1.632569e-04; criterion <= 1.000000e-02; 设计边缘 NILS：16=6.82613938,32=6.82725398；预设相对差≤1%。
+- PASS: leakage_symmetric_pattern_center; value=2.220446e-16; criterion <= 2.000000e-12; 固定阈值左右边缘的中心位置；统一双态响应保持几何对称性。
+- PASS: nominal_triangle_target_and_legacy; value=0.000000e+00; criterion <= 1.000000e-12; 独立解析三角形：target_cd 得 T0=.25,CD=6；默认 fixed_fraction 得 T0=.5,CD=4。
+- PASS: nominal_workpoint_metadata; value=0.000000e+00; criterion <= 0.000000e+00; 名义工作点保存模式、目标尺寸、共同强度参考及两侧设计边缘强度。
+- PASS: nominal_workpoint_declared_tolerances; value=1.378634e-16; criterion <= 1.000000e-12; 按约定输出强度容差1e-10*Iref，CD容差1e-9*max(1,w) um。
+- PASS: nominal_dose_independent_triangle_formula; value=0.000000e+00; criterion <= 1.000000e-12; s=.95,1,1.05；解析 CD(s)=8-2/s，实测 CD=[5.894736842105264, 6.0, 6.095238095238095] um。
+- PASS: nominal_dose_threshold_equivalence; value=8.881784e-16; criterion <= 1.000000e-12; 在相同线性插值坐标上 I>=T0/s 与 sI>=T0 的交点一致。
+- PASS: nominal_target_rejects_asymmetric; value=0.000000e+00; criterion <= 0.000000e+00; target_cd 必须报错，不能静默使用错误阈值或相邻/分离区域边缘。
+- PASS: nominal_target_rejects_disconnected; value=0.000000e+00; criterion <= 0.000000e+00; target_cd 必须报错，不能静默使用错误阈值或相邻/分离区域边缘。
+- PASS: nominal_target_rejects_all_bright; value=0.000000e+00; criterion <= 0.000000e+00; target_cd 必须报错，不能静默使用错误阈值或相邻/分离区域边缘。
+- PASS: nominal_target_rejects_zero_design_edge; value=0.000000e+00; criterion <= 0.000000e+00; target_cd 必须报错，不能静默使用错误阈值或相邻/分离区域边缘。
+- PASS: nominal_legacy_keeps_invalid_baseline_behavior; value=0.000000e+00; criterion <= 0.000000e+00; 默认 fixed_fraction 模式保持无双边缘基准 CD=NaN 的原行为。
+- PASS: nominal_workpoint_invalid_inputs; value=0.000000e+00; criterion <= 0.000000e+00; 模式/尺寸/强度参考/目标搜索范围：拒绝5/5项。
+- PASS: nominal_dose_rejects_invalid_inputs; value=0.000000e+00; criterion <= 0.000000e+00; s 必须为有限正实数（排除bool/复数/字符串），T0必须有限正数：拒绝13/13项。
+- PASS: nominal_default_dmd_target_cd; value=0.000000e+00; criterion <= 6.000000e-09; 默认DMD无漏光基准：CD=6 um，T0=0.203826311049，T0/Iref=0.19325953995。
+- PASS: nominal_dose_preserves_raw_intensity; value=0.000000e+00; criterion <= 0.000000e+00; 相同代表响应的原始强度截面不因dose_scale改变或被就地缩放。
+- PASS: nominal_dose_preserves_design_nils; value=0.000000e+00; criterion <= 1.000000e-13; dose_scale仅移动评价阈值，设计边缘NILS由同一原始强度计算。
+- PASS: nominal_default_dose_changes_threshold_cd; value=0.000000e+00; criterion <= 0.000000e+00; 默认代表图形的中央单调边缘：s=.95,1,1.05，CD=[6.245488224927031, 6.332466688145315, 6.4131272933796115] um。
+- PASS: cross_leakage_fov_baseline_roi; value=2.216580e-03; criterion <= 2.000000e-02; 中央固定 ROI 的强度 RMSE / 原视场共同 I_ref；两个方向视场加倍，采样间距不变。
+- PASS: cross_leakage_fov_baseline_profile; value=6.473653e-03; criterion <= 2.000000e-02; 中央横截面 RMSE / 原视场共同 I_ref；无逐图归一化、平移拟合或重缩放。
+- PASS: cross_leakage_fov_response_roi; value=2.043170e-03; criterion <= 2.000000e-02; 中央固定 ROI 的强度 RMSE / 原视场共同 I_ref；两个方向视场加倍，采样间距不变。
+- PASS: cross_leakage_fov_response_profile; value=5.769581e-03; criterion <= 2.000000e-02; 中央横截面 RMSE / 原视场共同 I_ref；无逐图归一化、平移拟合或重缩放。
+
+二、一维—二维交叉验证
+- 基准：透明空间0.5 um，不透明线0.5 um，周期1 um，波长0.248 um，NA=0.85。
+- 几何最高通过级次：floor(1*0.85/0.248)=3。
+- 几何通过级次：-3,-2,-1,0,1,2,3。
+- 50%占空比理论非零成像级次：-3,-1,0,1,3。
+- NOT RUN: 未启用或未执行。
+
+三、8与16采样/微镜收敛检查
+- NOT RUN
+
+四、NA影响实验
+- NOT RUN
+
+五、DMD采样比实验（示例参数）
+- NOT RUN
+
+六、二维十字图形演示
+- NOT RUN
+
+七、当前模型不能代表的过程
+- DLP9000X真实微镜倾转、闪耀条件及OFF漏光的物理来源和角分布；
+- 新增ON/OFF响应为选定投影通道内的等效复振幅，不预测器件衍射效率；
+- DMD窗口透过率、偏振、实际照明角谱和空间非均匀性；
+- 实际投影镜头MTF、离焦、像差和空间变化PSF；
+- 部分相干、扫描曝光、DMD刷新时序、运动误差；
+- 光刻胶化学、显影、绝对曝光剂量和最终工艺CD。
+
+本次实验开关（旧文件不计入本次结果）
+- textbook_validation: NOT RUN
+- na_sweep: NOT RUN
+- sampling_ratio: NOT RUN
+- original_cross: NOT RUN
+- legacy_convergence: NOT RUN
+- leakage_ratio: EXECUTED
+- leakage_phase: NOT RUN
+- leakage_cross: EXECUTED
+- dose_check: EXECUTED
+- defocus: EXECUTED
+
+八、ON/OFF等效响应与名义曝光工作点（演示参数，非实测设备参数）
+- 模式=target_cd；目标CD=6 um；实际名义基准CD=6 um。
+- 共同基准eta=1,rho=0,s=1；I_ref=1.05467658208；T0=0.203826311049；T0/I_ref=0.19325953995。
+- 设计边缘线性插值强度L/R=(0.203826311049,0.203826311049)；对称容差=1.05e-10；CD/边缘位置容差=6e-09 um（target_cd模式使用）。
+- 基准评价Omega：中央横截面x在(-6.0, 6.0) um，实际采样范围[-5.95312,5.95312] um。
+- 基准设计右边缘NILS=8.01876931。
+- 名义工作点只设定一次；不是实验标定，也不证明设备能打印目标CD。
+- 原始I和I_ref不随s改变；材料等效剂量阈值固定，T(s)=T0/s，不同时乘s。
+- delta_cd_to_nominal_baseline及旧delta_*_to_baseline以baseline,s=1为参考；delta_cd_to_same_dose_baseline以baseline,s为参考；error_to_design以设计为参考。
+- 暗区使用当前有效阈值；只检查CSV的固定中部区间，不代表二维无缺陷。
+- ratio_00: eta=1, rho=0, phi=0, s=1, T(s)=0.203826311; CD=6 um; delta_nominal=0 um; delta_same_dose=0 um; same_dose_baseline_status=VALID; NILS=8.0187693; dark_max=0.015493896; dark_exceeds_threshold=False; VALID
+- ratio_01: eta=1, rho=0.0001, phi=0, s=1, T(s)=0.203826311; CD=6.030056207 um; delta_nominal=0.0300562074 um; delta_same_dose=0.0300562074 um; same_dose_baseline_status=VALID; NILS=7.8599818; dark_max=0.013042721; dark_exceeds_threshold=False; VALID
+- ratio_02: eta=1, rho=0.01, phi=0, s=1, T(s)=0.203826311; CD=6.332466688 um; delta_nominal=0.332466688 um; delta_same_dose=0.332466688 um; same_dose_baseline_status=VALID; NILS=6.5608116; dark_max=0.014639026; dark_exceeds_threshold=False; VALID
+- ratio_03: eta=1, rho=0.05, phi=0, s=1, T(s)=0.203826311; CD=6.868172854 um; delta_nominal=0.868172854 um; delta_same_dose=0.868172854 um; same_dose_baseline_status=VALID; NILS=5.0880059; dark_max=0.052132245; dark_exceeds_threshold=False; VALID
+- dose_baseline_00: eta=1, rho=0, phi=0, s=0.95, T(s)=0.2145540116; CD=5.921152325 um; delta_nominal=-0.0788476752 um; delta_same_dose=0 um; same_dose_baseline_status=VALID; NILS=8.0187693; dark_max=0.015493896; dark_exceeds_threshold=False; VALID
+- dose_baseline_01: eta=1, rho=0, phi=0, s=1, T(s)=0.203826311; CD=6 um; delta_nominal=0 um; delta_same_dose=0 um; same_dose_baseline_status=VALID; NILS=8.0187693; dark_max=0.015493896; dark_exceeds_threshold=False; VALID
+- dose_baseline_02: eta=1, rho=0, phi=0, s=1.05, T(s)=0.1941202962; CD=6.071338373 um; delta_nominal=0.0713383728 um; delta_same_dose=0 um; same_dose_baseline_status=VALID; NILS=8.0187693; dark_max=0.015493896; dark_exceeds_threshold=False; VALID
+- dose_baseline_03: eta=1, rho=0, phi=0, s=1.2, T(s)=0.1698552592; CD=6.26029876 um; delta_nominal=0.26029876 um; delta_same_dose=0 um; same_dose_baseline_status=VALID; NILS=8.0187693; dark_max=0.015493896; dark_exceeds_threshold=False; VALID
+- dose_representative_00: eta=1, rho=0.01, phi=0, s=0.95, T(s)=0.2145540116; CD=6.245488225 um; delta_nominal=0.245488225 um; delta_same_dose=0.3243359 um; same_dose_baseline_status=VALID; NILS=6.5608116; dark_max=0.014639026; dark_exceeds_threshold=False; VALID
+- dose_representative_01: eta=1, rho=0.01, phi=0, s=1, T(s)=0.203826311; CD=6.332466688 um; delta_nominal=0.332466688 um; delta_same_dose=0.332466688 um; same_dose_baseline_status=VALID; NILS=6.5608116; dark_max=0.014639026; dark_exceeds_threshold=False; VALID
+- dose_representative_02: eta=1, rho=0.01, phi=0, s=1.05, T(s)=0.1941202962; CD=6.413127293 um; delta_nominal=0.413127293 um; delta_same_dose=0.341788921 um; same_dose_baseline_status=VALID; NILS=6.5608116; dark_max=0.014639026; dark_exceeds_threshold=False; VALID
+- dose_representative_03: eta=1, rho=0.01, phi=0, s=1.2, T(s)=0.1698552592; CD=6.624487763 um; delta_nominal=0.624487763 um; delta_same_dose=0.364189003 um; same_dose_baseline_status=VALID; NILS=6.5608116; dark_max=0.014639026; dark_exceeds_threshold=False; VALID
+- 先叠加复场再求强度，交叉项可正可负；相位对照属于敏感性分析，不代表实际DMD可以独立控制漏光相位。
+- eta是当前通道内等效强度缩放，不是器件总效率，也不是s；rho不是混合图形暗亮中心比。
+- 双态单微镜空间响应近似成比例、均匀静态、完全相干；正常衍射暗区、OFF残余复场、其他路径杂散光必须区分。
+- CD仍为未标定的空中像阈值宽度；尺寸余量须结合NILS、暗区与曝光扰动判断。
+- 后续在固定材料与工艺下用CD—剂量实验校准，并用未参与校准的图形验证。本轮不实现绝对剂量、胶反应、显影、拟合或自动标定。
+二维十字漏光对照：演示参数，非实测设备参数；两图使用共同基准和固定阈值。
+十字宽/长=6/30 um，ROI=[-18, 18] um²。
+独立十字窗口=64×64 微镜，投影间距=1.5 um，samples_per_mirror=16，开口边长比=0.95；FOV 检查将两个方向的微镜数均加倍。
+十字响应 eta=1, rho=0.01, phi=0 rad；I_ref=1.27238166036, I_th=0.63619083018。
+十字 baseline 视场检查：ROI NRMSE=0.00221658，横截面 NRMSE=0.00647365；限值均为 0.02。
+十字 response 视场检查：ROI NRMSE=0.00204317，横截面 NRMSE=0.00576958；限值均为 0.02。
+离焦实验：固定镜头，沿光传播方向的观察面位移为正；时间约定exp(-i omega t)。
+- 模型边界：空气n=1、单色、静态、标量、完全相干、局部空间不变；角谱相位去除公共exp(i k z)，未模拟移动镜组/光楔引起的倍率、像差或像移。
+- NA=0.065在默认LDI配置中仅为参考值，不是河南百合镜头实测或标定数据。
+- 固定响应eta=1,rho=0,phi=0 rad；所有焦位s=1。
+- 名义参考eta=1,rho=0,phi=0,z=0,s=1；模式=target_cd；I_ref=1.05467658208,T0=0.203826311049；仅建立一次。
+- 横截面实际row=255, y=-0.046875 um；复场和强度取同一行。
+- 网格Nx=1024,Ny=512,dx=0.09375,dy=0.09375 um；Lx=Nx*dx=96,Ly=Ny*dy=48 um；delta_fx=0.0104166666667,delta_fy=0.0208333333333,fc=0.16049382716 cycles/um。
+- 运行前检查完整圆瞳通带及光强2fc的Nyquist条件；NILS沿用设计右边缘7点四次拟合，实际拟合范围见CSV。提高每微镜采样数细化开口积分与截面导数；增大窗口改善频率间隔，不等同于前者。本实验是严格周期窗口，不证明孤立图形窗口收敛。
+- delta_*_to_nominal_baseline始终相对无漏光、零离焦、s=1；若打开固定漏光，变化包含漏光与离焦共同影响。能量为完整网格sum|U|^2，不是标定光功率。
+- 阈值失效保留NaN和原因，中心对比度保留符号；等线空三束图可能CD近似不变而NILS变化。
+- z=-50 um: CD=6 um; NILS=7.248449922; contrast=0.8776979762; dark_exceeds_threshold=False; VALID
+- z=-25 um: CD=6 um; NILS=7.82381969; contrast=0.9473681602; dark_exceeds_threshold=False; VALID
+- z=0 um: CD=6 um; NILS=8.018769311; contrast=0.9709741555; dark_exceeds_threshold=False; VALID
+- z=25 um: CD=6 um; NILS=7.82381969; contrast=0.9473681602; dark_exceeds_threshold=False; VALID
+- z=50 um: CD=6 um; NILS=7.248449922; contrast=0.8776979762; dark_exceeds_threshold=False; VALID
+
+完整本次配置
+{
+  "switches": {
+    "textbook_validation": false,
+    "na_sweep": false,
+    "sampling_ratio": false,
+    "original_cross": false,
+    "legacy_convergence": false,
+    "leakage_ratio": true,
+    "leakage_phase": false,
+    "leakage_cross": true,
+    "dose_check": true,
+    "defocus": true
+  },
+  "legacy_textbook": {
+    "on_width_um": 0.5,
+    "line_width_um": 0.5,
+    "wavelength_um": 0.248,
+    "numerical_aperture": 0.85,
+    "na_sweep_numerical_apertures": [
+      0.2,
+      0.3,
+      0.85
+    ],
+    "dmd_mirror_pitch_um": 7.56,
+    "projected_mirror_pitch_um": 0.125,
+    "num_mirrors_x": 64,
+    "num_mirrors_y": 64,
+    "samples_per_mirror": 8,
+    "convergence_samples_per_mirror": 16,
+    "active_side_ratio": 1.0,
+    "aperture_demo_active_side_ratio": 0.95,
+    "phase_offset_um": 0.0,
+    "profile_display_half_range_um": 1.5,
+    "frequency_display_cutoff_multiple": 1.5
+  },
+  "legacy_sampling": {
+    "target_on_width_um": 6.0,
+    "target_line_width_um": 6.0,
+    "wavelength_um": 0.405,
+    "numerical_aperture": 0.065,
+    "dmd_mirror_pitch_um": 7.56,
+    "n_cd_values": [
+      3.5,
+      2.0,
+      1.0
+    ],
+    "phase_offset_fraction": 0.35,
+    "num_mirrors_x": 64,
+    "num_mirrors_y": 32,
+    "samples_per_mirror": 8,
+    "active_side_ratio": 0.95,
+    "display_half_range_um": 12.0
+  },
+  "legacy_cross": {
+    "arm_width_um": 6.0,
+    "arm_length_um": 30.0,
+    "center_x_um": 0.0,
+    "center_y_um": 0.0,
+    "wavelength_um": 0.405,
+    "numerical_aperture": 0.065,
+    "dmd_mirror_pitch_um": 7.56,
+    "projected_mirror_pitch_um": 3.0,
+    "num_mirrors_x": 40,
+    "num_mirrors_y": 40,
+    "samples_per_mirror": 20,
+    "active_side_ratio": 0.95,
+    "arm_probe_offset_um": 9.0,
+    "frequency_display_cutoff_multiple": 4.0
+  },
+  "leakage_dmd": {
+    "num_mirrors_x": 64,
+    "num_mirrors_y": 32,
+    "dmd_mirror_pitch_um": 7.56,
+    "projection_magnification": 0.19841269841269843,
+    "samples_per_mirror": 16,
+    "active_side_ratio": 0.95,
+    "on_amplitude": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "off_amplitude": {
+      "real": 0.0,
+      "imag": 0.0
+    }
+  },
+  "leakage_cross_dmd": {
+    "num_mirrors_x": 64,
+    "num_mirrors_y": 64,
+    "dmd_mirror_pitch_um": 7.56,
+    "projection_magnification": 0.19841269841269843,
+    "samples_per_mirror": 16,
+    "active_side_ratio": 0.95,
+    "on_amplitude": {
+      "real": 1.0,
+      "imag": 0.0
+    },
+    "off_amplitude": {
+      "real": 0.0,
+      "imag": 0.0
+    }
+  },
+  "optical": {
+    "wavelength_um": 0.405,
+    "numerical_aperture": 0.065
+  },
+  "on_width_um": 6.0,
+  "pitch_um": 12.0,
+  "phase_offset_um": 0.0,
+  "eta": 1.0,
+  "rho": 0.01,
+  "phi_rad": 0.0,
+  "leakage_ratios": [
+    0.0,
+    0.0001,
+    0.01,
+    0.05
+  ],
+  "leakage_phases_rad": [
+    0.0,
+    1.5707963267948966,
+    3.141592653589793
+  ],
+  "threshold_fraction": 0.5,
+  "evaluation_bounds_um": [
+    -6.0,
+    6.0
+  ],
+  "threshold_mode": "target_cd",
+  "dose_scales": [
+    0.95,
+    1.0,
+    1.05,
+    1.2
+  ],
+  "search_bounds_um": [
+    -6.0,
+    6.0
+  ],
+  "dark_bounds_um": [
+    4.5,
+    7.5
+  ],
+  "defocus_values_um": [
+    -50.0,
+    -25.0,
+    0.0,
+    25.0,
+    50.0
+  ],
+  "defocus_eta": 1.0,
+  "defocus_rho": 0.0,
+  "defocus_phi_rad": 0.0
+}
+
+本次生成文件
+figure_leakage_ratio.png
+figure_leakage_dose.png
+leakage_metrics.csv
+figure_leakage_cross.png
+leakage_representative_data.npz
+defocus_metrics.csv
+defocus_representative_data.npz
+figure_defocus_comparison.png
+figure_defocus_pupil.png
+validation_summary.txt

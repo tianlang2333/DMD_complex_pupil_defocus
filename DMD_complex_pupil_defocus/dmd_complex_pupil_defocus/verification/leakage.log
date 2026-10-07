@@ -1,0 +1,48 @@
+PASS leakage_zero_recovers_old_model: 0 <= 1e-13; eta=1,rho=0 与原配置使用同一二维渲染/传播。
+PASS leakage_sqrt_ratio_and_replace: 7.34788079e-18 <= 1e-14; eta=.36,rho=.04,phi=pi/2 应得 Aon=.6,Aoff=.12j。
+PASS leakage_config_copy_preserves_geometry: 0 <= 0; 原冻结配置不变，返回配置副本。
+PASS leakage_invalid_parameters: 0 <= 0; 有限实数/范围校验：正确拒绝 17/17 项。
+PASS leakage_eta_intensity_scaling: 2.22044605e-16 <= 3e-13; 相同 rho,phi 下 I(eta=.37)=.37 I(eta=1)。
+PASS leakage_full_off_on_ratio: 1.73472348e-18 <= 3e-13; 有限开口不变，全 OFF/ON 原始强度比为 rho=.01。
+PASS leakage_complex_field_superposition: 4.44850886e-16 <= 3e-13; 总场一次传播等于 ON/OFF 基场传播后复数合成；不按强度相加。
+PASS leakage_nonzero_interference_term: 0 <= 0; 与错误的分态强度相加最大差=0.0311178819，预期>0.01。
+PASS leakage_phase_2pi_periodicity: 0 <= 3e-13; phi 和 phi+2pi 在固定标尺上比较。
+PASS leakage_phase_sign_symmetry_real_pupil: 6.66133815e-16 <= 3e-13; 本轮实数基场/实偶圆瞳条件下 I(phi)=I(-phi)。
+PASS leakage_equal_complex_states_remove_modulation: 0 <= 3e-13; Aon=Aoff，翻转状态矩阵不改变场；开口仍保留。
+PASS leakage_equal_states_retain_aperture: 0 <= 0; 相等双态不移除镜间隙及部分覆盖权重。
+PASS leakage_equal_modulus_is_not_equal_response: 0 <= 0; 同模反相仍有调制；与同相像强度最大差=0.813707256。
+PASS leakage_off_respects_fractional_aperture: 0 <= 1e-14; 部分覆盖单元继续保留原开口权重，不能整体填满 OFF 像元。
+PASS leakage_off_does_not_fill_gaps: 0 <= 0; active_side_ratio=.8,spm=20；36864 个零间隙采样保持零。
+PASS leakage_eta_zero_and_invalid_metrics: 0 <= 0; 全零场 CD/NILS 为 NaN；状态=CENTER_BELOW_THRESHOLD。
+PASS leakage_fixed_threshold_not_renormalized: 0 <= 1e-12; 解析三角形：基准 CD=4；缩放后固定阈值 CD=3；相对峰值 CD=4。
+PASS leakage_threshold_invalid_center_below: 0 <= 0; 无双边缘不得给零 CD 或截断边界；状态=CENTER_BELOW_THRESHOLD。
+PASS leakage_threshold_invalid_full_bright: 0 <= 0; 无双边缘不得给零 CD 或截断边界；状态=ALL_ABOVE_THRESHOLD。
+PASS leakage_threshold_invalid_tight_search: 0 <= 0; 无双边缘不得给零 CD 或截断边界；状态=ALL_ABOVE_THRESHOLD。
+PASS leakage_threshold_invalid_one_edge_missing: 0 <= 0; 无双边缘不得给零 CD 或截断边界；状态=MISSING_RIGHT_EDGE。
+PASS leakage_analytic_exact_midpoint_field_spm16: 1.06570206e-15 <= 3e-12; 独立有限 Fourier 和；中点修正已知，无位移拟合、无强度重缩放。
+PASS leakage_analytic_continuous_bound_spm16: 9.93712596e-05 <= 0.000100712004; 绝对强度误差由 2*B*delta+delta^2 界定；dx=0.09375 um，order=1。
+PASS leakage_analytic_exact_midpoint_field_spm32: 1.3506446e-15 <= 3e-12; 独立有限 Fourier 和；中点修正已知，无位移拟合、无强度重缩放。
+PASS leakage_analytic_continuous_bound_spm32: 2.48494623e-05 <= 2.51762071e-05; 绝对强度误差由 2*B*delta+delta^2 界定；dx=0.046875 um，order=1。
+PASS leakage_analytic_refinement_error_ratio: 0.250066895 <= 0.3; 中点采样 O(dx^2)：16→32 预期误差约 1/4；误差=9.93712596e-05,2.48494623e-05。
+PASS leakage_common_reference_preserved: 0 <= 0; 粗细采样评价返回完全相同的输入参考强度和固定阈值。
+PASS leakage_finite_aperture_profile_16_to_32: 8.96571843e-05 <= 0.01; 有限开口 .95,rho=.01,phi=.7；固定 Iref=1.05513623,Ith=0.527568113；预设截面变化≤1%。
+PASS leakage_finite_aperture_cd_16_to_32: 0.000326822372 <= 0.01; 固定阈值 CD：16=4.20795726,32=4.20828409 um；预设差≤.01 um。
+PASS leakage_finite_aperture_nils_16_to_32: 0.000163256935 <= 0.01; 设计边缘 NILS：16=6.82613938,32=6.82725398；预设相对差≤1%。
+PASS leakage_symmetric_pattern_center: 2.22044605e-16 <= 2e-12; 固定阈值左右边缘的中心位置；统一双态响应保持几何对称性。
+PASS nominal_triangle_target_and_legacy: 0 <= 1e-12; 独立解析三角形：target_cd 得 T0=.25,CD=6；默认 fixed_fraction 得 T0=.5,CD=4。
+PASS nominal_workpoint_metadata: 0 <= 0; 名义工作点保存模式、目标尺寸、共同强度参考及两侧设计边缘强度。
+PASS nominal_workpoint_declared_tolerances: 1.37863435e-16 <= 1e-12; 按约定输出强度容差1e-10*Iref，CD容差1e-9*max(1,w) um。
+PASS nominal_dose_independent_triangle_formula: 0 <= 1e-12; s=.95,1,1.05；解析 CD(s)=8-2/s，实测 CD=[5.894736842105264, 6.0, 6.095238095238095] um。
+PASS nominal_dose_threshold_equivalence: 8.8817842e-16 <= 1e-12; 在相同线性插值坐标上 I>=T0/s 与 sI>=T0 的交点一致。
+PASS nominal_target_rejects_asymmetric: 0 <= 0; target_cd 必须报错，不能静默使用错误阈值或相邻/分离区域边缘。
+PASS nominal_target_rejects_disconnected: 0 <= 0; target_cd 必须报错，不能静默使用错误阈值或相邻/分离区域边缘。
+PASS nominal_target_rejects_all_bright: 0 <= 0; target_cd 必须报错，不能静默使用错误阈值或相邻/分离区域边缘。
+PASS nominal_target_rejects_zero_design_edge: 0 <= 0; target_cd 必须报错，不能静默使用错误阈值或相邻/分离区域边缘。
+PASS nominal_legacy_keeps_invalid_baseline_behavior: 0 <= 0; 默认 fixed_fraction 模式保持无双边缘基准 CD=NaN 的原行为。
+PASS nominal_workpoint_invalid_inputs: 0 <= 0; 模式/尺寸/强度参考/目标搜索范围：拒绝5/5项。
+PASS nominal_dose_rejects_invalid_inputs: 0 <= 0; s 必须为有限正实数（排除bool/复数/字符串），T0必须有限正数：拒绝13/13项。
+PASS nominal_default_dmd_target_cd: 0 <= 6e-09; 默认DMD无漏光基准：CD=6 um，T0=0.203826311049，T0/Iref=0.19325953995。
+PASS nominal_dose_preserves_raw_intensity: 0 <= 0; 相同代表响应的原始强度截面不因dose_scale改变或被就地缩放。
+PASS nominal_dose_preserves_design_nils: 0 <= 1e-13; dose_scale仅移动评价阈值，设计边缘NILS由同一原始强度计算。
+PASS nominal_default_dose_changes_threshold_cd: 0 <= 0; 默认代表图形的中央单调边缘：s=.95,1,1.05，CD=[6.245488224927031, 6.332466688145315, 6.4131272933796115] um。
+Saved: /workspace/scratch/cb120bfe3ccb/dmd_complex_pupil_defocus/verification/leakage/leakage_validation_checks.json

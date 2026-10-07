@@ -1,0 +1,832 @@
+{
+  "checks": [
+    {
+      "name": "FFT往返误差",
+      "value": 1.3463600052204709e-15,
+      "limit": 1e-12,
+      "comparison": "<",
+      "passed": true,
+      "detail": "max|IFFT(FFT(U))-U|"
+    },
+    {
+      "name": "全通瞳孔恢复输入",
+      "value": 1.3463600052204709e-15,
+      "limit": 1e-12,
+      "comparison": "<",
+      "passed": true,
+      "detail": "P(fx,fy)=1"
+    },
+    {
+      "name": "常数场验证",
+      "value": 2.220446049250313e-16,
+      "limit": 1e-12,
+      "comparison": "<",
+      "passed": true,
+      "detail": "真实DMD渲染：全部ON、active_side_ratio=1、全通瞳孔"
+    },
+    {
+      "name": "左右对称性",
+      "value": 5.771657047285146e-16,
+      "limit": 1e-10,
+      "comparison": "<",
+      "passed": true,
+      "detail": "中心对称方孔与圆形瞳孔"
+    },
+    {
+      "name": "上下对称性",
+      "value": 7.214571309106432e-16,
+      "limit": 1e-10,
+      "comparison": "<",
+      "passed": true,
+      "detail": "中心对称方孔与圆形瞳孔"
+    },
+    {
+      "name": "能量不增加",
+      "value": 0.7984091778672414,
+      "limit": 1.000000000001,
+      "comparison": "<=",
+      "passed": true,
+      "detail": "Eout/Ein <= 1+1e-12"
+    }
+  ],
+  "configurations": {
+    "textbook": {
+      "on_width_um": 0.5,
+      "line_width_um": 0.5,
+      "wavelength_um": 0.248,
+      "numerical_aperture": 0.85,
+      "na_sweep_numerical_apertures": [
+        0.2,
+        0.3,
+        0.85
+      ],
+      "dmd_mirror_pitch_um": 7.56,
+      "projected_mirror_pitch_um": 0.125,
+      "num_mirrors_x": 64,
+      "num_mirrors_y": 64,
+      "samples_per_mirror": 8,
+      "convergence_samples_per_mirror": 16,
+      "active_side_ratio": 1.0,
+      "aperture_demo_active_side_ratio": 0.95,
+      "phase_offset_um": 0.0,
+      "profile_display_half_range_um": 1.5,
+      "frequency_display_cutoff_multiple": 1.5
+    },
+    "sampling": {
+      "target_on_width_um": 6.0,
+      "target_line_width_um": 6.0,
+      "wavelength_um": 0.405,
+      "numerical_aperture": 0.065,
+      "dmd_mirror_pitch_um": 7.56,
+      "n_cd_values": [
+        3.5,
+        2.0,
+        1.0
+      ],
+      "phase_offset_fraction": 0.35,
+      "num_mirrors_x": 64,
+      "num_mirrors_y": 32,
+      "samples_per_mirror": 8,
+      "active_side_ratio": 0.95,
+      "display_half_range_um": 12.0
+    },
+    "cross": {
+      "arm_width_um": 6.0,
+      "arm_length_um": 30.0,
+      "center_x_um": 0.0,
+      "center_y_um": 0.0,
+      "wavelength_um": 0.405,
+      "numerical_aperture": 0.065,
+      "dmd_mirror_pitch_um": 7.56,
+      "projected_mirror_pitch_um": 3.0,
+      "num_mirrors_x": 40,
+      "num_mirrors_y": 40,
+      "samples_per_mirror": 20,
+      "active_side_ratio": 0.95,
+      "arm_probe_offset_um": 9.0,
+      "frequency_display_cutoff_multiple": 4.0
+    }
+  },
+  "base": {
+    "metrics": {
+      "space_center_intensity": 0.8535781883997927,
+      "line_center_intensity": 0.00576343288007575,
+      "contrast": 0.986586398849175,
+      "threshold_interval": {
+        "left_edge_um": -0.21399032653538214,
+        "right_edge_um": 0.21399032653538216,
+        "width_um": 0.42798065307076427
+      },
+      "nils": 16.02588618086556
+    },
+    "energy": {
+      "input_energy": 131072.0,
+      "output_energy": 124645.40707409618,
+      "energy_transmission": 0.9509689870765394,
+      "frequency_cutoff_cyc_per_um": 3.4274193548387095
+    }
+  },
+  "textbook": {
+    "status": "COMPLETED",
+    "reason": "已调用textbook_dense_lines_aerial_image.py的真实API；nm/um已换算，最高通过级次=3，中央周期同坐标比较",
+    "raw_rmse": 0.0008177803256570893,
+    "peak_normalized_rmse": 0.0005865895701097374,
+    "textbook_metrics": {
+      "space_center_intensity": 0.8545397302758772,
+      "line_center_intensity": 0.00571336711910181,
+      "contrast": 0.9867170088979555,
+      "threshold_interval": {
+        "left_edge_um": -0.21397828083507073,
+        "right_edge_um": 0.21397828083507073,
+        "width_um": 0.42795656167014146
+      },
+      "nils": 16.0
+    },
+    "dmd_2d_metrics": {
+      "space_center_intensity": 0.8535781883997927,
+      "line_center_intensity": 0.00576343288007575,
+      "contrast": 0.986586398849175,
+      "threshold_interval": {
+        "left_edge_um": -0.21399032653538214,
+        "right_edge_um": 0.21399032653538216,
+        "width_um": 0.42798065307076427
+      },
+      "nils": 16.02588618086556
+    }
+  },
+  "convergence": {
+    "metrics_8": {
+      "space_center_intensity": 0.8535781883997927,
+      "line_center_intensity": 0.00576343288007575,
+      "contrast": 0.986586398849175,
+      "threshold_interval": {
+        "left_edge_um": -0.21399032653538214,
+        "right_edge_um": 0.21399032653538216,
+        "width_um": 0.42798065307076427
+      },
+      "nils": 16.02588618086556
+    },
+    "metrics_16": {
+      "space_center_intensity": 0.8543029411117309,
+      "line_center_intensity": 0.0057322392136192135,
+      "contrast": 0.9866697564361246,
+      "threshold_interval": {
+        "left_edge_um": -0.21377401814018954,
+        "right_edge_um": 0.21377401814018954,
+        "width_um": 0.4275480362803791
+      },
+      "nils": 16.007221946141904
+    },
+    "normalized_profile_rmse": 0.0009709598854737648,
+    "space_center_relative_change": 0.0008483556324821112,
+    "line_center_relative_change": 0.005441794261206576,
+    "contrast_relative_change": 8.44837762644629e-05,
+    "nils_relative_change": 0.0011659883761500206,
+    "threshold_cd_relative_change": 0.001011855402609066,
+    "maximum_metric_relative_change": 0.005441794261206576,
+    "converged_within_two_percent": true
+  },
+  "na": [
+    {
+      "numerical_aperture": 0.2,
+      "maximum_geometric_order": 0,
+      "metrics": {
+        "space_center_intensity": 0.24999999999999992,
+        "line_center_intensity": 0.24999999999999986,
+        "contrast": 0.0,
+        "threshold_interval": {
+          "left_edge_um": null,
+          "right_edge_um": null,
+          "width_um": null
+        },
+        "nils": 0.0
+      },
+      "energy": {
+        "input_energy": 131072.0,
+        "output_energy": 65535.99999999997,
+        "energy_transmission": 0.4999999999999998,
+        "frequency_cutoff_cyc_per_um": 0.8064516129032259
+      }
+    },
+    {
+      "numerical_aperture": 0.3,
+      "maximum_geometric_order": 1,
+      "metrics": {
+        "space_center_intensity": 1.292485257057219,
+        "line_center_intensity": 0.01873430424542033,
+        "contrast": 0.9714246114101459,
+        "threshold_interval": {
+          "left_edge_um": -0.1710179701230739,
+          "right_edge_um": 0.1710179701230739,
+          "width_um": 0.3420359402461478
+        },
+        "nils": 8.003142034051965
+      },
+      "energy": {
+        "input_energy": 131072.0,
+        "output_energy": 118700.1679656833,
+        "energy_transmission": 0.9056104123358406,
+        "frequency_cutoff_cyc_per_um": 1.2096774193548387
+      }
+    },
+    {
+      "numerical_aperture": 0.85,
+      "maximum_geometric_order": 3,
+      "metrics": {
+        "space_center_intensity": 0.8535781883997927,
+        "line_center_intensity": 0.00576343288007575,
+        "contrast": 0.986586398849175,
+        "threshold_interval": {
+          "left_edge_um": -0.21399032653538214,
+          "right_edge_um": 0.21399032653538216,
+          "width_um": 0.42798065307076427
+        },
+        "nils": 16.02588618086556
+      },
+      "energy": {
+        "input_energy": 131072.0,
+        "output_energy": 124645.40707409618,
+        "energy_transmission": 0.9509689870765394,
+        "frequency_cutoff_cyc_per_um": 3.4274193548387095
+      }
+    }
+  ],
+  "sampling": [
+    {
+      "n_cd": 3.5,
+      "config": {
+        "num_mirrors_x": 64,
+        "num_mirrors_y": 32,
+        "dmd_mirror_pitch_um": 7.56,
+        "projection_magnification": 0.22675736961451248,
+        "samples_per_mirror": 8,
+        "active_side_ratio": 0.95,
+        "on_amplitude": [
+          1.0,
+          0.0
+        ],
+        "off_amplitude": [
+          0.0,
+          0.0
+        ]
+      },
+      "ideal_metrics": {
+        "space_center_intensity": 1.276589326925584,
+        "line_center_intensity": 0.020589577522919206,
+        "contrast": 0.9682548375519984,
+        "threshold_interval": {
+          "left_edge_um": -1.375705171086509,
+          "right_edge_um": 2.661419456800794,
+          "width_um": 4.037124627887303
+        },
+        "nils": 7.648193792697123
+      },
+      "dmd_metrics": {
+        "space_center_intensity": 0.8515408018243734,
+        "line_center_intensity": 0.03535292836521358,
+        "contrast": 0.920276968566107,
+        "threshold_interval": {
+          "left_edge_um": -0.9994878252465326,
+          "right_edge_um": 2.7137735395322466,
+          "width_um": 3.7132613647787793
+        },
+        "nils": 7.043878416736369
+      },
+      "rasterized_interval": {
+        "left_edge_um": -1.7142857142857142,
+        "right_edge_um": 3.4285714285714284,
+        "width_um": 5.142857142857142
+      },
+      "raster_left_epe_um": 0.6857142857142857,
+      "raster_right_epe_um": -0.1714285714285717,
+      "raster_cd_error_um": -0.8571428571428577,
+      "threshold_left_epe_um": 1.4005121747534672,
+      "threshold_right_epe_um": -0.8862264604677534,
+      "threshold_cd_error_um": -2.2867386352212207,
+      "ideal_threshold_left_epe_um": 1.024294828913491,
+      "ideal_threshold_right_epe_um": -0.938580543199206,
+      "ideal_threshold_cd_error_um": -1.9628753721126966,
+      "dmd_minus_ideal_left_edge_um": 0.37621734583997635,
+      "dmd_minus_ideal_right_edge_um": 0.05235408273145259,
+      "dmd_minus_ideal_threshold_cd_um": -0.3238632631085241,
+      "normalized_image_rmse": 0.06561271178839971
+    },
+    {
+      "n_cd": 2.0,
+      "config": {
+        "num_mirrors_x": 64,
+        "num_mirrors_y": 32,
+        "dmd_mirror_pitch_um": 7.56,
+        "projection_magnification": 0.39682539682539686,
+        "samples_per_mirror": 8,
+        "active_side_ratio": 0.95,
+        "on_amplitude": [
+          1.0,
+          0.0
+        ],
+        "off_amplitude": [
+          0.0,
+          0.0
+        ]
+      },
+      "ideal_metrics": {
+        "space_center_intensity": 1.29307994781752,
+        "line_center_intensity": 0.018779362987448808,
+        "contrast": 0.9713698521895222,
+        "threshold_interval": {
+          "left_edge_um": -0.9317976527899172,
+          "right_edge_um": 3.181797652789917,
+          "width_um": 4.113595305579834
+        },
+        "nils": 7.619308048512836
+      },
+      "dmd_metrics": {
+        "space_center_intensity": 0.8942489883949281,
+        "line_center_intensity": 0.0019234822435740047,
+        "contrast": 0.9957073391415303,
+        "threshold_interval": {
+          "left_edge_um": -2.0530891046857564,
+          "right_edge_um": 2.053089104685757,
+          "width_um": 4.106178209371514
+        },
+        "nils": 21.157444385189677
+      },
+      "rasterized_interval": {
+        "left_edge_um": -3.0,
+        "right_edge_um": 3.0,
+        "width_um": 6.0
+      },
+      "raster_left_epe_um": -1.0499999999999998,
+      "raster_right_epe_um": -1.0499999999999998,
+      "raster_cd_error_um": 0.0,
+      "threshold_left_epe_um": -0.10308910468575627,
+      "threshold_right_epe_um": -1.996910895314243,
+      "threshold_cd_error_um": -1.8938217906284862,
+      "ideal_threshold_left_epe_um": 1.018202347210083,
+      "ideal_threshold_right_epe_um": -0.8682023472100826,
+      "ideal_threshold_cd_error_um": -1.8864046944201656,
+      "dmd_minus_ideal_left_edge_um": -1.1212914518958392,
+      "dmd_minus_ideal_right_edge_um": -1.1287085481041603,
+      "dmd_minus_ideal_threshold_cd_um": -0.00741709620832065,
+      "normalized_image_rmse": 0.23835883386669604
+    },
+    {
+      "n_cd": 1.0,
+      "config": {
+        "num_mirrors_x": 64,
+        "num_mirrors_y": 32,
+        "dmd_mirror_pitch_um": 7.56,
+        "projection_magnification": 0.7936507936507937,
+        "samples_per_mirror": 8,
+        "active_side_ratio": 0.95,
+        "on_amplitude": [
+          1.0,
+          0.0
+        ],
+        "off_amplitude": [
+          0.0,
+          0.0
+        ]
+      },
+      "ideal_metrics": {
+        "space_center_intensity": 1.2948515416558617,
+        "line_center_intensity": 0.017552054334243866,
+        "contrast": 0.9732520477879335,
+        "threshold_interval": {
+          "left_edge_um": 0.16446315936760514,
+          "right_edge_um": 4.335536840632395,
+          "width_um": 4.17107368126479
+        },
+        "nils": 7.154052980945664
+      },
+      "dmd_metrics": {
+        "space_center_intensity": 0.9680213281512069,
+        "line_center_intensity": 0.004358776002466241,
+        "contrast": 0.9910348309599362,
+        "threshold_interval": {
+          "left_edge_um": 0.9321126256134981,
+          "right_edge_um": 5.067887374386502,
+          "width_um": 4.135774748773004
+        },
+        "nils": 4.494965284502349
+      },
+      "rasterized_interval": {
+        "left_edge_um": 0.0,
+        "right_edge_um": 6.0,
+        "width_um": 6.0
+      },
+      "raster_left_epe_um": 0.9000000000000004,
+      "raster_right_epe_um": 0.9000000000000004,
+      "raster_cd_error_um": 0.0,
+      "threshold_left_epe_um": 1.8321126256134983,
+      "threshold_right_epe_um": -0.03211262561349759,
+      "threshold_cd_error_um": -1.864225251226996,
+      "ideal_threshold_left_epe_um": 1.0644631593676055,
+      "ideal_threshold_right_epe_um": -0.7644631593676046,
+      "ideal_threshold_cd_error_um": -1.8289263187352098,
+      "dmd_minus_ideal_left_edge_um": 0.7676494662458929,
+      "dmd_minus_ideal_right_edge_um": 0.732350533754107,
+      "dmd_minus_ideal_threshold_cd_um": -0.03529893249178606,
+      "normalized_image_rmse": 0.16452070221998163
+    }
+  ],
+  "cross": {
+    "config": {
+      "num_mirrors_x": 40,
+      "num_mirrors_y": 40,
+      "dmd_mirror_pitch_um": 7.56,
+      "projection_magnification": 0.39682539682539686,
+      "samples_per_mirror": 20,
+      "active_side_ratio": 0.95,
+      "on_amplitude": [
+        1.0,
+        0.0
+      ],
+      "off_amplitude": [
+        0.0,
+        0.0
+      ]
+    },
+    "central_horizontal_span_um": 28.256868639892538,
+    "central_vertical_span_um": 28.256868639892538,
+    "horizontal_arm_width_um": 3.196995884708638,
+    "vertical_arm_width_um": 3.1969958847086395,
+    "threshold_area_um2": 183.15,
+    "centroid_x_um": 1.7458052475678137e-18,
+    "centroid_y_um": -4.469261433773603e-16,
+    "centroid_shift_um": 4.469295531402273e-16,
+    "central_span_difference_um": 0.0,
+    "arm_width_difference_um": 1.3322676295501878e-15
+  },
+  "legacy_metric_rows": [
+    {
+      "experiment": "1d_2d_cross_validation",
+      "case_name": "2d_dmd_reference_spm8",
+      "wavelength_um": 0.248,
+      "numerical_aperture": 0.85,
+      "projected_mirror_pitch_um": 0.125,
+      "samples_per_mirror": 8,
+      "active_side_ratio": 1.0,
+      "n_cd": 4.0,
+      "input_energy": 131072.0,
+      "output_energy": 124645.40707409618,
+      "energy_transmission": 0.9509689870765394,
+      "space_center_intensity": 0.8535781883997927,
+      "line_center_intensity": 0.00576343288007575,
+      "contrast": 0.986586398849175,
+      "threshold_cd_um": 0.42798065307076427,
+      "nils": 16.02588618086556,
+      "left_epe_um": null,
+      "right_epe_um": null,
+      "rmse_to_reference": 0.0005865895701097374,
+      "rasterized_on_width_um": null,
+      "raster_cd_error_um": null,
+      "threshold_cd_error_um": null,
+      "threshold_left_epe_um": null,
+      "threshold_right_epe_um": null,
+      "horizontal_cd_um": null,
+      "vertical_cd_um": null,
+      "central_horizontal_span_um": null,
+      "central_vertical_span_um": null,
+      "ideal_threshold_cd_um": null,
+      "ideal_threshold_cd_error_um": null,
+      "ideal_threshold_left_epe_um": null,
+      "ideal_threshold_right_epe_um": null,
+      "dmd_minus_ideal_threshold_cd_um": null,
+      "dmd_minus_ideal_left_edge_um": null,
+      "dmd_minus_ideal_right_edge_um": null,
+      "threshold_area_um2": null,
+      "centroid_x_um": null,
+      "centroid_y_um": null,
+      "notes": "真实一维教材程序比较已完成"
+    },
+    {
+      "experiment": "grid_convergence",
+      "case_name": "spm16",
+      "wavelength_um": 0.248,
+      "numerical_aperture": 0.85,
+      "projected_mirror_pitch_um": 0.125,
+      "samples_per_mirror": 16,
+      "active_side_ratio": 1.0,
+      "n_cd": 4.0,
+      "input_energy": null,
+      "output_energy": null,
+      "energy_transmission": null,
+      "space_center_intensity": 0.8543029411117309,
+      "line_center_intensity": 0.0057322392136192135,
+      "contrast": 0.9866697564361246,
+      "threshold_cd_um": 0.4275480362803791,
+      "nils": 16.007221946141904,
+      "left_epe_um": null,
+      "right_epe_um": null,
+      "rmse_to_reference": 0.0009709598854737648,
+      "rasterized_on_width_um": null,
+      "raster_cd_error_um": null,
+      "threshold_cd_error_um": null,
+      "threshold_left_epe_um": null,
+      "threshold_right_epe_um": null,
+      "horizontal_cd_um": null,
+      "vertical_cd_um": null,
+      "central_horizontal_span_um": null,
+      "central_vertical_span_um": null,
+      "ideal_threshold_cd_um": null,
+      "ideal_threshold_cd_error_um": null,
+      "ideal_threshold_left_epe_um": null,
+      "ideal_threshold_right_epe_um": null,
+      "dmd_minus_ideal_threshold_cd_um": null,
+      "dmd_minus_ideal_left_edge_um": null,
+      "dmd_minus_ideal_right_edge_um": null,
+      "threshold_area_um2": null,
+      "centroid_x_um": null,
+      "centroid_y_um": null,
+      "notes": "8与16采样/微镜主要指标变化不超过2%"
+    },
+    {
+      "experiment": "na_sweep",
+      "case_name": "NA_0.20",
+      "wavelength_um": 0.248,
+      "numerical_aperture": 0.2,
+      "projected_mirror_pitch_um": 0.125,
+      "samples_per_mirror": 8,
+      "active_side_ratio": 1.0,
+      "n_cd": 4.0,
+      "input_energy": 131072.0,
+      "output_energy": 65535.99999999997,
+      "energy_transmission": 0.4999999999999998,
+      "space_center_intensity": 0.24999999999999992,
+      "line_center_intensity": 0.24999999999999986,
+      "contrast": 0.0,
+      "threshold_cd_um": null,
+      "nils": 0.0,
+      "left_epe_um": null,
+      "right_epe_um": null,
+      "rmse_to_reference": null,
+      "rasterized_on_width_um": null,
+      "raster_cd_error_um": null,
+      "threshold_cd_error_um": null,
+      "threshold_left_epe_um": null,
+      "threshold_right_epe_um": null,
+      "horizontal_cd_um": null,
+      "vertical_cd_um": null,
+      "central_horizontal_span_um": null,
+      "central_vertical_span_um": null,
+      "ideal_threshold_cd_um": null,
+      "ideal_threshold_cd_error_um": null,
+      "ideal_threshold_left_epe_um": null,
+      "ideal_threshold_right_epe_um": null,
+      "dmd_minus_ideal_threshold_cd_um": null,
+      "dmd_minus_ideal_left_edge_um": null,
+      "dmd_minus_ideal_right_edge_um": null,
+      "threshold_area_um2": null,
+      "centroid_x_um": null,
+      "centroid_y_um": null,
+      "notes": "仅零级通过，均匀像NILS为0，阈值CD不可定义"
+    },
+    {
+      "experiment": "na_sweep",
+      "case_name": "NA_0.30",
+      "wavelength_um": 0.248,
+      "numerical_aperture": 0.3,
+      "projected_mirror_pitch_um": 0.125,
+      "samples_per_mirror": 8,
+      "active_side_ratio": 1.0,
+      "n_cd": 4.0,
+      "input_energy": 131072.0,
+      "output_energy": 118700.1679656833,
+      "energy_transmission": 0.9056104123358406,
+      "space_center_intensity": 1.292485257057219,
+      "line_center_intensity": 0.01873430424542033,
+      "contrast": 0.9714246114101459,
+      "threshold_cd_um": 0.3420359402461478,
+      "nils": 8.003142034051965,
+      "left_epe_um": null,
+      "right_epe_um": null,
+      "rmse_to_reference": null,
+      "rasterized_on_width_um": null,
+      "raster_cd_error_um": null,
+      "threshold_cd_error_um": null,
+      "threshold_left_epe_um": null,
+      "threshold_right_epe_um": null,
+      "horizontal_cd_um": null,
+      "vertical_cd_um": null,
+      "central_horizontal_span_um": null,
+      "central_vertical_span_um": null,
+      "ideal_threshold_cd_um": null,
+      "ideal_threshold_cd_error_um": null,
+      "ideal_threshold_left_epe_um": null,
+      "ideal_threshold_right_epe_um": null,
+      "dmd_minus_ideal_threshold_cd_um": null,
+      "dmd_minus_ideal_left_edge_um": null,
+      "dmd_minus_ideal_right_edge_um": null,
+      "threshold_area_um2": null,
+      "centroid_x_um": null,
+      "centroid_y_um": null,
+      "notes": "几何最高通过级次=1"
+    },
+    {
+      "experiment": "na_sweep",
+      "case_name": "NA_0.85",
+      "wavelength_um": 0.248,
+      "numerical_aperture": 0.85,
+      "projected_mirror_pitch_um": 0.125,
+      "samples_per_mirror": 8,
+      "active_side_ratio": 1.0,
+      "n_cd": 4.0,
+      "input_energy": 131072.0,
+      "output_energy": 124645.40707409618,
+      "energy_transmission": 0.9509689870765394,
+      "space_center_intensity": 0.8535781883997927,
+      "line_center_intensity": 0.00576343288007575,
+      "contrast": 0.986586398849175,
+      "threshold_cd_um": 0.42798065307076427,
+      "nils": 16.02588618086556,
+      "left_epe_um": null,
+      "right_epe_um": null,
+      "rmse_to_reference": null,
+      "rasterized_on_width_um": null,
+      "raster_cd_error_um": null,
+      "threshold_cd_error_um": null,
+      "threshold_left_epe_um": null,
+      "threshold_right_epe_um": null,
+      "horizontal_cd_um": null,
+      "vertical_cd_um": null,
+      "central_horizontal_span_um": null,
+      "central_vertical_span_um": null,
+      "ideal_threshold_cd_um": null,
+      "ideal_threshold_cd_error_um": null,
+      "ideal_threshold_left_epe_um": null,
+      "ideal_threshold_right_epe_um": null,
+      "dmd_minus_ideal_threshold_cd_um": null,
+      "dmd_minus_ideal_left_edge_um": null,
+      "dmd_minus_ideal_right_edge_um": null,
+      "threshold_area_um2": null,
+      "centroid_x_um": null,
+      "centroid_y_um": null,
+      "notes": "几何最高通过级次=3"
+    },
+    {
+      "experiment": "dmd_sampling_ratio_example",
+      "case_name": "N_CD_3.50",
+      "wavelength_um": 0.405,
+      "numerical_aperture": 0.065,
+      "projected_mirror_pitch_um": 1.7142857142857142,
+      "samples_per_mirror": 8,
+      "active_side_ratio": 0.95,
+      "n_cd": 3.5,
+      "input_energy": 45790.61759999999,
+      "output_energy": 39679.82271901329,
+      "energy_transmission": 0.866549192798249,
+      "space_center_intensity": 0.8515408018243734,
+      "line_center_intensity": 0.03535292836521358,
+      "contrast": 0.920276968566107,
+      "threshold_cd_um": 3.7132613647787793,
+      "nils": 7.043878416736369,
+      "left_epe_um": 0.6857142857142857,
+      "right_epe_um": -0.1714285714285717,
+      "rmse_to_reference": 0.06561271178839971,
+      "rasterized_on_width_um": 5.142857142857142,
+      "raster_cd_error_um": -0.8571428571428577,
+      "threshold_cd_error_um": -2.2867386352212207,
+      "threshold_left_epe_um": 1.4005121747534672,
+      "threshold_right_epe_um": -0.8862264604677534,
+      "horizontal_cd_um": null,
+      "vertical_cd_um": null,
+      "central_horizontal_span_um": null,
+      "central_vertical_span_um": null,
+      "ideal_threshold_cd_um": 4.037124627887303,
+      "ideal_threshold_cd_error_um": -1.9628753721126966,
+      "ideal_threshold_left_epe_um": 1.024294828913491,
+      "ideal_threshold_right_epe_um": -0.938580543199206,
+      "dmd_minus_ideal_threshold_cd_um": -0.3238632631085241,
+      "dmd_minus_ideal_left_edge_um": 0.37621734583997635,
+      "dmd_minus_ideal_right_edge_um": 0.05235408273145259,
+      "threshold_area_um2": null,
+      "centroid_x_um": null,
+      "centroid_y_um": null,
+      "notes": "示例参数，不代表公司真实设备参数"
+    },
+    {
+      "experiment": "dmd_sampling_ratio_example",
+      "case_name": "N_CD_2.00",
+      "wavelength_um": 0.405,
+      "numerical_aperture": 0.065,
+      "projected_mirror_pitch_um": 3.0,
+      "samples_per_mirror": 8,
+      "active_side_ratio": 0.95,
+      "n_cd": 2.0,
+      "input_energy": 54270.36159999999,
+      "output_energy": 48720.68639303184,
+      "energy_transmission": 0.8977402205669448,
+      "space_center_intensity": 0.8942489883949281,
+      "line_center_intensity": 0.0019234822435740047,
+      "contrast": 0.9957073391415303,
+      "threshold_cd_um": 4.106178209371514,
+      "nils": 21.157444385189677,
+      "left_epe_um": -1.0499999999999998,
+      "right_epe_um": -1.0499999999999998,
+      "rmse_to_reference": 0.23835883386669604,
+      "rasterized_on_width_um": 6.0,
+      "raster_cd_error_um": 0.0,
+      "threshold_cd_error_um": -1.8938217906284862,
+      "threshold_left_epe_um": -0.10308910468575627,
+      "threshold_right_epe_um": -1.996910895314243,
+      "horizontal_cd_um": null,
+      "vertical_cd_um": null,
+      "central_horizontal_span_um": null,
+      "central_vertical_span_um": null,
+      "ideal_threshold_cd_um": 4.113595305579834,
+      "ideal_threshold_cd_error_um": -1.8864046944201656,
+      "ideal_threshold_left_epe_um": 1.018202347210083,
+      "ideal_threshold_right_epe_um": -0.8682023472100826,
+      "dmd_minus_ideal_threshold_cd_um": -0.00741709620832065,
+      "dmd_minus_ideal_left_edge_um": -1.1212914518958392,
+      "dmd_minus_ideal_right_edge_um": -1.1287085481041603,
+      "threshold_area_um2": null,
+      "centroid_x_um": null,
+      "centroid_y_um": null,
+      "notes": "示例参数，不代表公司真实设备参数"
+    },
+    {
+      "experiment": "dmd_sampling_ratio_example",
+      "case_name": "N_CD_1.00",
+      "wavelength_um": 0.405,
+      "numerical_aperture": 0.065,
+      "projected_mirror_pitch_um": 6.0,
+      "samples_per_mirror": 8,
+      "active_side_ratio": 0.95,
+      "n_cd": 1.0,
+      "input_energy": 54270.36159999999,
+      "output_energy": 50237.55201111525,
+      "energy_transmission": 0.9256903866127043,
+      "space_center_intensity": 0.9680213281512069,
+      "line_center_intensity": 0.004358776002466241,
+      "contrast": 0.9910348309599362,
+      "threshold_cd_um": 4.135774748773004,
+      "nils": 4.494965284502349,
+      "left_epe_um": 0.9000000000000004,
+      "right_epe_um": 0.9000000000000004,
+      "rmse_to_reference": 0.16452070221998163,
+      "rasterized_on_width_um": 6.0,
+      "raster_cd_error_um": 0.0,
+      "threshold_cd_error_um": -1.864225251226996,
+      "threshold_left_epe_um": 1.8321126256134983,
+      "threshold_right_epe_um": -0.03211262561349759,
+      "horizontal_cd_um": null,
+      "vertical_cd_um": null,
+      "central_horizontal_span_um": null,
+      "central_vertical_span_um": null,
+      "ideal_threshold_cd_um": 4.17107368126479,
+      "ideal_threshold_cd_error_um": -1.8289263187352098,
+      "ideal_threshold_left_epe_um": 1.0644631593676055,
+      "ideal_threshold_right_epe_um": -0.7644631593676046,
+      "dmd_minus_ideal_threshold_cd_um": -0.03529893249178606,
+      "dmd_minus_ideal_left_edge_um": 0.7676494662458929,
+      "dmd_minus_ideal_right_edge_um": 0.732350533754107,
+      "threshold_area_um2": null,
+      "centroid_x_um": null,
+      "centroid_y_um": null,
+      "notes": "示例参数，不代表公司真实设备参数"
+    },
+    {
+      "experiment": "2d_cross_pattern_example",
+      "case_name": "cross_6um_width_30um_length",
+      "wavelength_um": 0.405,
+      "numerical_aperture": 0.065,
+      "projected_mirror_pitch_um": 3.0,
+      "samples_per_mirror": 20,
+      "active_side_ratio": 0.9499999999999996,
+      "n_cd": null,
+      "input_energy": 12320.999999999982,
+      "output_energy": 10563.628687299237,
+      "energy_transmission": 0.857367801907252,
+      "space_center_intensity": null,
+      "line_center_intensity": null,
+      "contrast": null,
+      "threshold_cd_um": 3.196995884708638,
+      "nils": null,
+      "left_epe_um": null,
+      "right_epe_um": null,
+      "rmse_to_reference": null,
+      "rasterized_on_width_um": null,
+      "raster_cd_error_um": null,
+      "threshold_cd_error_um": null,
+      "threshold_left_epe_um": null,
+      "threshold_right_epe_um": null,
+      "horizontal_cd_um": 3.196995884708638,
+      "vertical_cd_um": 3.1969958847086395,
+      "central_horizontal_span_um": 28.256868639892538,
+      "central_vertical_span_um": 28.256868639892538,
+      "ideal_threshold_cd_um": null,
+      "ideal_threshold_cd_error_um": null,
+      "ideal_threshold_left_epe_um": null,
+      "ideal_threshold_right_epe_um": null,
+      "dmd_minus_ideal_threshold_cd_um": null,
+      "dmd_minus_ideal_left_edge_um": null,
+      "dmd_minus_ideal_right_edge_um": null,
+      "threshold_area_um2": 183.15,
+      "centroid_x_um": 1.7458052475678137e-18,
+      "centroid_y_um": -4.469261433773603e-16,
+      "notes": "示例参数；孤立图形仅评价中央ROI"
+    }
+  ]
+}

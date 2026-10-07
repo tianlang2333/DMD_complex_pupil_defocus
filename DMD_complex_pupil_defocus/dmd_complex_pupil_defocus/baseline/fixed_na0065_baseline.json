@@ -1,0 +1,149 @@
+{
+  "source_directory": "/workspace/scratch/cb120bfe3ccb/original",
+  "source_sha256": {
+    "README.md": "32d9b9c9f6d83bb7ed03364eced06fa9c35d14f3202e4d62dfa38425ac7bb47a",
+    "capture_original_baseline.py": "eb0c094d16f17704b70b71da41961ac6d0ce30a6803daea5103acde0aba909f5",
+    "coherent_imaging_2d.py": "fd9ea2ae74dab81cdd32a38cbebd8b980f734a377d14e2d22786a79f9b0e4114",
+    "dmd_model_2d.py": "4bdb344f7c370db2c9ac43acf98130bd4b3f8f4457c4be7d8c1587712d5f62c6",
+    "round2_regression.py": "c82b4982a42c11bd3b0ea5e4b271927f3ead8ac2bcad150332eaa52954b7d14e",
+    "run_dmd_2d_validation.py": "68e224a898783265e48068cfe1948c56bec5e6be0bd648ab7719984a27df027a",
+    "test_leakage_validation.py": "b4f5c2dffa3d692501ac843adafb26c1fe064792186260af534b8fcfabc0a01c",
+    "textbook_dense_lines_aerial_image.py": "f11650857915bb3bf54da8a3117eaa765eaa1ab4a078032013e640b830282fc8",
+    "verify_run_switches.py": "ce3f24d55a0865d72ce53a8b70bb1c9ae5488f70ad6888fb578b23957a06a129"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "geometry": {
+    "num_mirrors_x": 64,
+    "num_mirrors_y": 32,
+    "dmd_mirror_pitch_um": 7.56,
+    "projected_mirror_pitch_um": 1.5,
+    "samples_per_mirror": 16,
+    "active_side_ratio": 0.95,
+    "on_width_um": 6.0,
+    "pitch_um": 12.0,
+    "phase_offset_um": 0.0
+  },
+  "optical": {
+    "wavelength_um": 0.405,
+    "numerical_aperture": 0.065
+  },
+  "workpoint": {
+    "threshold_mode": "target_cd",
+    "target_cd_um": 6.0,
+    "nominal_baseline_cd_um": 6.0,
+    "nominal_baseline_status": "VALID",
+    "reference_intensity": 1.0546765820801907,
+    "nominal_threshold_intensity": 0.20382631104900517,
+    "nominal_threshold_fraction": 0.1932595399501414,
+    "design_left_intensity": 0.20382631104900517,
+    "design_right_intensity": 0.20382631104900517,
+    "intensity_symmetry_tolerance": 1.0546765820801907e-10,
+    "cd_tolerance_um": 6.000000000000001e-09
+  },
+  "cases": {
+    "no_leakage": {
+      "eta": 1.0,
+      "rho": 0.0,
+      "phi_rad": 0.0,
+      "metrics": {
+        "reference_intensity": 1.0546765820801907,
+        "threshold_intensity": 0.20382631104900517,
+        "fixed_left_edge_um": -3.0,
+        "fixed_right_edge_um": 3.0,
+        "fixed_cd_um": 6.0,
+        "cd_error_to_design_um": 0.0,
+        "left_error_to_design_um": 0.0,
+        "right_error_to_design_um": 0.0,
+        "design_edge_nils": 8.018769311400602,
+        "nils_status": "VALID",
+        "on_center_intensity": 1.0550328604193895,
+        "off_center_intensity": 0.015537098562559283,
+        "center_contrast": 0.9709741555286415,
+        "contrast_status": "VALID",
+        "dark_max_intensity": 0.01549389611174918,
+        "dark_exceeds_threshold": false,
+        "dark_sample_left_um": 4.546875,
+        "dark_sample_right_um": 7.453125,
+        "search_left_um": -6.0,
+        "search_right_um": 6.0,
+        "threshold_status": "VALID"
+      },
+      "input_energy": 221878.68159999995,
+      "output_energy": 193701.2294012044,
+      "energy_transmission": 0.8730051395852734,
+      "profile_row": 255,
+      "profile_y_um": -0.046875
+    },
+    "complex_leakage": {
+      "eta": 1.0,
+      "rho": 0.01,
+      "phi_rad": 1.0471975511965976,
+      "metrics": {
+        "reference_intensity": 1.0546765820801907,
+        "threshold_intensity": 0.20382631104900517,
+        "fixed_left_edge_um": -3.08533670374497,
+        "fixed_right_edge_um": 3.0853367037449697,
+        "fixed_cd_um": 6.170673407489939,
+        "cd_error_to_design_um": 0.17067340748993942,
+        "left_error_to_design_um": -0.08533670374497015,
+        "right_error_to_design_um": 0.08533670374496971,
+        "design_edge_nils": 7.151875511888223,
+        "nils_status": "VALID",
+        "on_center_intensity": 1.0423850459559183,
+        "off_center_intensity": 0.0132842417176557,
+        "center_contrast": 0.9748325694935565,
+        "contrast_status": "VALID",
+        "dark_max_intensity": 0.013257450522954066,
+        "dark_exceeds_threshold": false,
+        "dark_sample_left_um": 4.546875,
+        "dark_sample_right_um": 7.453125,
+        "search_left_um": -6.0,
+        "search_right_um": 6.0,
+        "threshold_status": "VALID"
+      },
+      "input_energy": 224097.46841599996,
+      "output_energy": 197619.911395096,
+      "energy_transmission": 0.8818480315370955,
+      "profile_row": 255,
+      "profile_y_um": -0.046875
+    }
+  },
+  "textbook": {
+    "config": {
+      "on_width_um": 0.5,
+      "line_width_um": 0.5,
+      "wavelength_um": 0.248,
+      "numerical_aperture": 0.85,
+      "na_sweep_numerical_apertures": [
+        0.2,
+        0.3,
+        0.85
+      ],
+      "dmd_mirror_pitch_um": 7.56,
+      "projected_mirror_pitch_um": 0.125,
+      "num_mirrors_x": 64,
+      "num_mirrors_y": 64,
+      "samples_per_mirror": 8,
+      "convergence_samples_per_mirror": 16,
+      "active_side_ratio": 1.0,
+      "aperture_demo_active_side_ratio": 0.95,
+      "phase_offset_um": 0.0,
+      "profile_display_half_range_um": 1.5,
+      "frequency_display_cutoff_multiple": 1.5
+    },
+    "metrics": {
+      "space_center_intensity": 0.8535781883997927,
+      "line_center_intensity": 0.00576343288007575,
+      "contrast": 0.986586398849175,
+      "threshold_interval": {
+        "left_edge_um": -0.21399032653538214,
+        "right_edge_um": 0.21399032653538216,
+        "width_um": 0.42798065307076427
+      },
+      "nils": 16.02588618086556
+    },
+    "input_energy": 131072.0,
+    "output_energy": 124645.40707409618
+  }
+}

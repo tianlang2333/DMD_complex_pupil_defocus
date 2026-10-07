@@ -1,0 +1,8 @@
+[Internal validation] PASS: FFT往返误差; value=1.346360e-15, criterion < 1.000000e-12
+[Internal validation] PASS: 全通瞳孔恢复输入; value=1.346360e-15, criterion < 1.000000e-12
+[Internal validation] PASS: 常数场验证; value=2.220446e-16, criterion < 1.000000e-12
+[Internal validation] PASS: 左右对称性; value=5.771657e-16, criterion < 1.000000e-10
+[Internal validation] PASS: 上下对称性; value=7.214571e-16, criterion < 1.000000e-10
+[Internal validation] PASS: 能量不增加; value=7.984092e-01, criterion <= 1.000000e+00
+[Checks] 57/57 PASS
+All requested outputs were written to: /workspace/scratch/cb120bfe3ccb/dmd_complex_pupil_defocus/results
